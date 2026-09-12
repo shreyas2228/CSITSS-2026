@@ -66,8 +66,13 @@ export default function NIESection() {
             transition={{ duration: 0.6 }}
             className="nie-content-col"
           >
-            <span className="section-badge">HOST INSTITUTION</span>
-            <h2 className="section-title">The National Institute of Engineering, Mysuru</h2>
+            <div className="nie-header-crest-row">
+              <img src="/nie-logo.png" alt="NIE Mysuru Crest" className="nie-content-logo" />
+              <div className="nie-header-text">
+                <span className="section-badge">HOST INSTITUTION</span>
+                <h2 className="section-title">The National Institute of Engineering, Mysuru</h2>
+              </div>
+            </div>
             <p className="nie-affiliation-tag">
               {institution.affiliation} • {institution.approvedBy}
             </p>

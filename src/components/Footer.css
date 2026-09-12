@@ -23,6 +23,17 @@
   margin-bottom: 16px;
 }
 
+.footer-nie-logo {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+  border-radius: var(--radius-sm);
+  background: #ffffff;
+  padding: 2px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  flex-shrink: 0;
+}
+
 .footer-institution-title {
   font-size: 0.95rem;
   font-weight: 700;
