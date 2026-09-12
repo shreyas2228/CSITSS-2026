@@ -27,18 +27,18 @@ export const conferenceData = {
 
   // Conference Metadata
   conference: {
-    name: "International Conference on Next-Generation Computing and Sustainable Technology",
-    acronym: "ICNCST 2026",
-    edition: "1st Edition",
+    name: "International Conference on Recent Trends in Electronics and Communication",
+    acronym: "ICRTEC 2027",
+    edition: "2027 Edition",
     ieeeNotice: "Accepted and presented papers will be submitted for possible inclusion in IEEE Xplore, subject to meeting IEEE Xplore's scope and quality requirements.",
-    dates: "November 19–21, 2026",
-    countdownTarget: "2026-11-19T09:00:00+05:30",
+    dates: "February 18–20, 2027",
+    countdownTarget: "2027-02-18T09:00:00+05:30",
     venue: "The National Institute of Engineering, Mysuru, Karnataka, India",
     mode: "Hybrid (In-person & Virtual Presentation Options)",
-    theme: "Engineering Innovations for Sustainable, Secure and Intelligent Future",
+    theme: "Recent Trends and Innovations in Electronics, Circuits, Systems and Communication Networks",
     registrationUrl: "#registration",
-    paperSubmissionUrl: "#submission",
-    brochureUrl: "#brochure",
+    paperSubmissionUrl: "#publication",
+    brochureUrl: "#publication",
     contactEmail: "ieeeconference@nie.ac.in",
     contactPhone: "+91 821 2480475",
     cmtUrl: "https://cmt3.research.microsoft.com/"
@@ -398,75 +398,444 @@ export const conferenceData = {
   committee: {
     chiefPatrons: [
       {
-        name: "Sri. N. Ramanuja",
-        designation: "President, The NIE Society",
-        institution: "The National Institute of Engineering, Mysuru"
+        name: "Dr. Ranganath M S",
+        designation: "President",
+        institution: "NIE MC"
+      },
+      {
+        name: "Sri. Uday Shankar B S",
+        designation: "Member",
+        institution: "NIE MC"
       }
     ],
     patrons: [
       {
-        name: "Sri. S. L. Ramachandra",
-        designation: "Hon. Secretary, The NIE Society",
-        institution: "The National Institute of Engineering, Mysuru"
-      },
-      {
-        name: "Dr. Rohini Nagapadma",
+        name: "Dr. Nagendra Parashar",
         designation: "Principal",
         institution: "The National Institute of Engineering, Mysuru"
       },
       {
-        name: "Dr. M. S. Ganesh Prasad",
+        name: "Dr. Likith Kumar M V",
         designation: "Vice Principal",
+        institution: "The National Institute of Engineering, Mysuru"
+      },
+      {
+        name: "Dr. Rohini Nagapadma",
+        designation: "Chief Innovation Officer",
         institution: "The National Institute of Engineering, Mysuru"
       }
     ],
     generalChairs: [
       {
-        name: "Dr. H. D. Phaneendra",
-        designation: "Professor & Head, Department of Computer Science & Engineering",
+        name: "Dr. Rajalekshmi Kishore",
+        designation: "Associate Professor & HOD, Dept. of ECE",
+        institution: "The National Institute of Engineering, Mysuru",
+        roleTitle: "General Chair"
+      }
+    ],
+    chairs: [
+      {
+        name: "Dr. Ashok K",
+        roleTitle: "Technical Program Chair",
+        designation: "Associate Professor, Dept. of ECE",
+        institution: "The National Institute of Engineering, Mysuru"
+      },
+      {
+        name: "Dr. Shushrutha KS",
+        roleTitle: "Technical Program Co-Chair",
+        designation: "Secretary, IEEE ComSoc Bangalore Chapter",
+        institution: "IEEE ComSoc Bangalore Chapter"
+      },
+      {
+        name: "Mr. Puneeth S",
+        roleTitle: "Publication Chair",
+        designation: "Assistant Professor & NIE IEEE Student Branch Counsellor",
+        institution: "The National Institute of Engineering, Mysuru"
+      },
+      {
+        name: "Dr. Remya Jayachandran",
+        roleTitle: "Publication Co-Chair",
+        designation: "EXECOM member, IEEE CAS Bangalore chapter, Assistant Professor & Deputy Head, IQAC",
+        institution: "The National Institute of Engineering, Mysuru"
+      },
+      {
+        name: "Dr. Yajunath K",
+        roleTitle: "Finance Chair",
+        designation: "Assistant Professor, Dept. of ECE",
+        institution: "The National Institute of Engineering, Mysuru"
+      },
+      {
+        name: "Dr. Raghu J",
+        roleTitle: "Sponsorship, Publicity & Promotion Chair",
+        designation: "Assistant Professor, ECE Dept",
+        institution: "The National Institute of Engineering, Mysuru"
+      }
+    ],
+    oversightCommittee: [
+      {
+        name: "Dr. Pradeepa H",
+        designation: "Dean Academics",
+        institution: "The National Institute of Engineering, Mysuru"
+      },
+      {
+        name: "Dr. Imran Mohammed Imran Khan",
+        designation: "Dean R & D",
+        institution: "The National Institute of Engineering, Mysuru"
+      },
+      {
+        name: "Dr. Prakash K R",
+        designation: "Professor and Dean PG Studies, Dept. of ME",
         institution: "NIE, Mysuru"
       },
       {
-        name: "Dr. C. Vidya Raj",
-        designation: "Professor & Dean (R&D)",
-        institution: "NIE, Mysuru"
-      }
-    ],
-    conferenceChairs: [
-      {
-        name: "Dr. P. Devaki",
-        designation: "Professor & Head, Department of Information Science & Engineering",
-        institution: "NIE, Mysuru"
+        name: "Dr. Prasanna H S",
+        designation: "Dean (P&I)",
+        institution: "The National Institute of Engineering, Mysuru"
       },
       {
-        name: "Dr. K. V. S. S. S. S. Sairam",
-        designation: "Professor & Head, Department of Electronics & Communication Engineering",
-        institution: "NIE, Mysuru"
-      }
-    ],
-    technicalChairs: [
-      {
-        name: "Dr. G. S. Anitha",
-        designation: "Associate Professor, Department of Electrical & Electronics Engineering",
-        institution: "NIE, Mysuru"
+        name: "Mr. Mir Amjad Husain",
+        designation: "CEO",
+        institution: "NIE TBI, Mysuru"
       },
       {
-        name: "Dr. N. Kumar",
-        designation: "Associate Professor, Department of Computer Science & Engineering",
-        institution: "NIE, Mysuru"
+        name: "Mr. Harshith Divakar",
+        designation: "Head, Training & Placements",
+        institution: "The National Institute of Engineering, Mysuru"
+      },
+      {
+        name: "Dr. Anitha R",
+        designation: "Professor & Head, CSE",
+        institution: "The National Institute of Engineering, Mysuru"
+      },
+      {
+        name: "Dr. N C Balaji",
+        designation: "Associate Professor & Head, Civil Engg",
+        institution: "The National Institute of Engineering, Mysuru"
+      },
+      {
+        name: "Dr. Gurumurthy S R",
+        designation: "Professor, Dept. of EEE",
+        institution: "The National Institute of Engineering, Mysuru"
+      },
+      {
+        name: "Dr. Parameshwara S",
+        designation: "Professor, Dept. of ECE",
+        institution: "The National Institute of Engineering, Mysuru"
+      },
+      {
+        name: "Dr. Sanjeev Gurugopinath",
+        designation: "Engineering Director",
+        institution: "MMRFIC Tech Pvt. Ltd., Bengaluru"
+      },
+      {
+        name: "Mr. Kiran Marathe",
+        designation: "Director",
+        institution: "Deshila Technology Research Institute, Mysuru"
+      },
+      {
+        name: "Dr. Anand Mukhopadhyay",
+        designation: "Senior Engineer",
+        institution: "Mathworks"
+      },
+      {
+        name: "Mr. Hariprasad Bhat",
+        designation: "Project Manager, CoreEL Technologies & Vice Chair, IEEE CAS Bangalore Chapter",
+        institution: "CoreEL Technologies / IEEE CAS Bangalore"
       }
     ],
-    publicationChairs: [
+    advisoryCommittee: [
       {
-        name: "Dr. S. Parameshwara",
+        name: "Dr. Gnanapriya Chidambaranathan",
+        designation: "Chair, IEEE ComSoc Bangalore Chapter",
+        institution: "IEEE ComSoc Bangalore Chapter"
+      },
+      {
+        name: "Dr. K R Suresh Nair",
+        designation: "IEEE India Council Track Chair, Chief Technology Advisor at Social Alpha & Founder and CEO of Design Alpha",
+        institution: "Social Alpha / Design Alpha"
+      },
+      {
+        name: "Dr. Baylon G. Fernandes",
+        designation: "Professor, Electrical Engineering",
+        institution: "IIT Bombay"
+      },
+      {
+        name: "Dr. Mahesh B Patil",
+        designation: "Professor, Electrical Engineering",
+        institution: "IIT Bombay"
+      },
+      {
+        name: "Dr. Vikram Gadre",
+        designation: "Professor, Electrical Engineering",
+        institution: "IIT Bombay"
+      },
+      {
+        name: "Dr. Harish K Pillai",
+        designation: "Professor, Electrical Engineering",
+        institution: "IIT Bombay"
+      },
+      {
+        name: "Dr. Debasattam Pal",
+        designation: "Associate Professor, Electrical Engineering",
+        institution: "IIT Bombay"
+      },
+      {
+        name: "Dr. Dwaipayan Mukherjee",
+        designation: "Assistant Professor, Electrical Engineering",
+        institution: "IIT Bombay"
+      },
+      {
+        name: "Dr. Kumar Appaiah",
+        designation: "Assistant Professor, Electrical Engineering",
+        institution: "IIT Bombay"
+      },
+      {
+        name: "Dr. Shyamlal",
         designation: "Associate Professor, Department of ECE",
+        institution: "NIT Surathkal"
+      },
+      {
+        name: "Dr. Prashantha Kumar H",
+        designation: "Associate Professor, Department of ECE",
+        institution: "NIT Surathkal"
+      },
+      {
+        name: "Dr. Suhail T A",
+        designation: "Post Doctoral Fellow",
+        institution: "The University of Hong Kong"
+      },
+      {
+        name: "Dr. Gopi Krishna Saramekala",
+        designation: "Associate Professor, Department of ECE",
+        institution: "NIT Calicut"
+      },
+      {
+        name: "Dr. K S Shushrutha",
+        designation: "Professor, Department of ECE",
+        institution: "RV College of Engineering, Bengaluru"
+      },
+      {
+        name: "Dr. Sanjeev Gurugopinath",
+        designation: "Engineering Director",
+        institution: "MMRFIC Tech Pvt. Ltd., Bengaluru"
+      },
+      {
+        name: "Mr. Kiran Marathe",
+        designation: "Director",
+        institution: "Deshila Technology Research Institute, Mysuru"
+      },
+      {
+        name: "Dr. Anand Mukhopadhyay",
+        designation: "Senior Engineer",
+        institution: "Mathworks"
+      },
+      {
+        name: "Dr. Ramesha C K",
+        designation: "Professor, Electrical and Electronics Engineering",
+        institution: "BITS Pilani"
+      },
+      {
+        name: "Dr. Raji Sundararajan",
+        designation: "Professor, ECET",
+        institution: "Purdue University, USA"
+      },
+      {
+        name: "Dr. Praveen Gurunath Bharathi",
+        designation: "Assistant Project Scientist",
+        institution: "University of California, Santa Cruz, USA"
+      },
+      {
+        name: "Dr. Sumantra Dutta Roy",
+        designation: "Department of Electrical Engineering",
+        institution: "Indian Institute of Technology, Delhi"
+      },
+      {
+        name: "Dr. Rajesh Kavaserri",
+        designation: "Co-Executive Director, Center for AI Innovation and Emergent Technologies",
+        institution: "South Dakota State University, USA"
+      },
+      {
+        name: "Dr. Sreejith Vidhyadharan Nair",
+        designation: "Faculty & Researcher",
+        institution: "University of North Dakota, Grand Forks, USA"
+      }
+    ],
+    technicalProgramCommittee: [
+      {
+        name: "Dr. Deepthi M S",
+        designation: "Assistant Professor, Department of ECE",
+        institution: "NIE, Mysuru"
+      },
+      {
+        name: "Dr. M R Rashmi",
+        designation: "Associate Professor, Department of CSE",
+        institution: "NIE, Mysuru"
+      },
+      {
+        name: "Mrs. Smrithi Vijayan",
+        designation: "Assistant Professor, Department of EEE",
+        institution: "NIE, Mysuru"
+      },
+      {
+        name: "Mrs. Shruthi R",
+        designation: "Assistant Professor, ECE Dept",
+        institution: "NIE, Mysuru"
+      },
+      {
+        name: "Ms. Ashwini D S",
+        designation: "Assistant Professor, Department of EEE",
+        institution: "NIE, Mysuru"
+      },
+      {
+        name: "Mr. Nitesh K A",
+        designation: "Assistant Professor, Department of EEE",
+        institution: "NIE, Mysuru"
+      },
+      {
+        name: "Ms. Vismitha V",
+        designation: "Assistant Professor, Department of ECE",
         institution: "NIE, Mysuru"
       }
     ],
-    financeChairs: [
+    trackChairs: [
       {
-        name: "Dr. B. S. Jayashree",
-        designation: "Professor, Department of CSE",
+        name: "Dr. C. Anjanappa",
+        designation: "Professor, ECE Dept",
+        institution: "NIE, Mysuru"
+      },
+      {
+        name: "Dr. R. Chidanadappa",
+        designation: "Professor, EEE Dept",
+        institution: "NIE, Mysuru"
+      },
+      {
+        name: "Anand Srivatsa",
+        designation: "Associate Professor, ECE Dept",
+        institution: "NIE, Mysuru"
+      },
+      {
+        name: "Dr. Jayashankar V N",
+        designation: "Associate Professor, ECE Dept",
+        institution: "NIE, Mysuru"
+      },
+      {
+        name: "Dr. B R Vatsala",
+        designation: "Associate Professor, CSE Dept",
+        institution: "NIE, Mysuru"
+      },
+      {
+        name: "Dr. Nagaraju",
+        designation: "Assistant Professor, ECE Dept",
+        institution: "NIE, Mysuru"
+      },
+      {
+        name: "Dr. Raghu J",
+        designation: "Assistant Professor, ECE Dept",
+        institution: "NIE, Mysuru"
+      }
+    ],
+    publicationCommittee: [
+      {
+        name: "Dr. Sharmila B S",
+        designation: "Assistant Professor, ECE Dept",
+        institution: "NIE, Mysuru"
+      },
+      {
+        name: "Dr. Kavitha S S",
+        designation: "Assistant Professor, ECE Dept",
+        institution: "NIE, Mysuru"
+      },
+      {
+        name: "Dr. Vijay B T",
+        designation: "Assistant Professor, ECE Dept",
+        institution: "NIE, Mysuru"
+      },
+      {
+        name: "Mr. Lokesha H R",
+        designation: "Assistant Professor, ECE Dept",
+        institution: "NIE, Mysuru"
+      },
+      {
+        name: "Mr. Vishwanath M K",
+        designation: "Assistant Professor, ECE Dept",
+        institution: "NIE, Mysuru"
+      },
+      {
+        name: "Ms. Kumuda H B",
+        designation: "Assistant Professor, ECE Dept",
+        institution: "NIE, Mysuru"
+      }
+    ],
+    registrationCommittee: [
+      {
+        name: "Dr. Jonitha Anand",
+        designation: "Assistant Professor, ECE Dept",
+        institution: "NIE, Mysuru"
+      },
+      {
+        name: "Mr. Mohammed Rahid",
+        designation: "Assistant Professor, ECE Dept",
+        institution: "NIE, Mysuru"
+      },
+      {
+        name: "Mr. Shilpashree M S",
+        designation: "Assistant Professor, ECE Dept",
+        institution: "NIE, Mysuru"
+      }
+    ],
+    foreignDelegatesKeynotes: [
+      {
+        name: "Dr. Anitha Raghavendra",
+        designation: "Professor of Practice, Department of ECE",
+        institution: "NIE, Mysuru"
+      },
+      {
+        name: "Dr. Sujeet Kumar Rai",
+        designation: "Assistant Professor, Department of ECE",
+        institution: "NIE, Mysuru"
+      }
+    ],
+    websiteCommittee: [
+      {
+        name: "Dr. Ananth G S",
+        designation: "Associate Professor & Head, MCA",
+        institution: "NIE, Mysuru"
+      },
+      {
+        name: "Mr. Sujayeendra Rao",
+        designation: "Assistant Professor, MCA",
+        institution: "NIE, Mysuru"
+      }
+    ],
+    logisticsCommittee: [
+      {
+        name: "Mr. Shivaji Rao Gaikwad",
+        designation: "PRO",
+        institution: "NIE, Mysuru"
+      },
+      {
+        name: "Ms. Kavya R",
+        designation: "Physical Education Director",
+        institution: "NIE, Mysuru"
+      },
+      {
+        name: "Mr. Vishal Sharma",
+        designation: "Assistant Engineer, Estate Office",
+        institution: "NIE, Mysuru"
+      },
+      {
+        name: "Mr. Likith Kumar K S",
+        designation: "Assistant Professor, Department of ECE",
+        institution: "NIE, Mysuru"
+      },
+      {
+        name: "Mr. Phaneesh",
+        designation: "Foreman, Department of ECE",
+        institution: "NIE, Mysuru"
+      },
+      {
+        name: "Mr. Prabhu",
+        designation: "Mechanic, Department of ECE",
         institution: "NIE, Mysuru"
       }
     ]

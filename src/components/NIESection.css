@@ -126,6 +126,41 @@
   flex-direction: column;
 }
 
+.nie-header-crest-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  margin-bottom: 6px;
+}
+
+.nie-content-logo {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  flex-shrink: 0;
+  background: #ffffff;
+  padding: 4px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+}
+
+.nie-header-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.nie-header-text .section-title {
+  margin-bottom: 0;
+}
+
+@media (max-width: 640px) {
+  .nie-header-crest-row {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
 .nie-affiliation-tag {
   font-size: 0.85rem;
   font-weight: 600;

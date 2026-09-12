@@ -32,9 +32,7 @@ export default function Footer() {
           {/* Col 1: Brand, Institution & Secretariat */}
           <div className="footer-brand-col">
             <div className="footer-brand">
-              <div className="brand-logo-badge">
-                <span className="logo-spark">✦</span>
-              </div>
+              <img src="/nie-logo.png" alt="NIE Crest" className="footer-nie-logo" />
               <div className="brand-text-block">
                 <span className="brand-title">{conference.acronym}</span>
                 <span className="brand-sub">IEEE & NIE Mysuru</span>
