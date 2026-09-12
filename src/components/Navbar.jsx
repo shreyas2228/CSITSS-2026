@@ -56,7 +56,7 @@ export default function Navbar() {
           </div>
           <div className="brand-separator"></div>
           <div className="brand-logo-circle nie-circle">
-            <span className="logo-text">{institution.shortName}</span>
+            <img src="/nie-logo.png" alt="NIE Logo" className="brand-nie-logo" />
           </div>
           <div className="brand-details">
             <span className="brand-inst-name">{institution.name}</span>

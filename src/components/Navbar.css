@@ -55,10 +55,18 @@
 }
 
 .nie-circle {
-  background: linear-gradient(135deg, #07132c, #00b4d8);
-  color: #ffffff;
-  border: 1.5px solid rgba(0, 180, 216, 0.35);
+  background: #ffffff;
+  border: 1.5px solid rgba(0, 180, 216, 0.4);
   box-shadow: 0 0 12px rgba(0, 180, 216, 0.3);
+  overflow: hidden;
+  padding: 1px;
+}
+
+.brand-nie-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 50%;
 }
 
 .brand-separator {
