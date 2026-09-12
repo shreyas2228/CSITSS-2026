@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Calendar, MapPin, ArrowRight, FileText, ChevronDown, Sparkles, Award, Cpu, Shield, Globe, Zap, Radio } from 'lucide-react';
+import { Calendar, MapPin, ArrowRight, FileText, ChevronDown, Atom, Award, Cpu, Shield, Globe, Zap, Radio } from 'lucide-react';
 import { conferenceData } from '../data/conferenceData';
 import Hero3DCanvas from './common/Hero3DCanvas';
 import Tilt3D from './common/Tilt3D';
@@ -155,7 +155,7 @@ export default function Hero() {
             {/* Central 3D Core Node */}
             <div className="core-node-3d">
               <div className="core-glow-pulse"></div>
-              <Sparkles size={30} className="core-icon-3d" />
+              <Atom size={32} className="core-icon-3d" />
               <span className="core-caption-3d">IEEE • NIE</span>
               <span className="core-sub-3d">ICNCST 2026</span>
             </div>
