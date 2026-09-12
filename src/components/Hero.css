@@ -1,0 +1,426 @@
+.hero-section {
+  position: relative;
+  min-height: 100vh;
+  padding-top: 130px;
+  padding-bottom: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  background-color: var(--dark-bg);
+}
+
+/* Background Grid & Ambient Glow Orbs */
+.hero-bg-grid {
+  position: absolute;
+  inset: 0;
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 48px 48px;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.hero-glow-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  pointer-events: none;
+  opacity: 0.35;
+}
+
+.orb-1 {
+  width: 450px;
+  height: 450px;
+  background: radial-gradient(circle, rgba(0, 180, 216, 0.4) 0%, transparent 70%);
+  top: -80px;
+  right: -50px;
+}
+
+.orb-2 {
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(0, 98, 155, 0.3) 0%, transparent 70%);
+  bottom: -100px;
+  left: -100px;
+}
+
+.hero-container {
+  position: relative;
+  z-index: 10;
+  display: grid;
+  grid-template-columns: 1.25fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+@media (max-width: 1024px) {
+  .hero-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+/* Badge Row */
+.hero-badge-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.hero-ieee-tag {
+  display: inline-block;
+  padding: 5px 12px;
+  border-radius: var(--radius-full);
+  background-color: rgba(0, 98, 155, 0.25);
+  border: 1px solid rgba(0, 180, 216, 0.4);
+  color: var(--accent);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.hero-inst-pill {
+  color: var(--dark-muted);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+/* Main Titles */
+.hero-super-title {
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  color: var(--dark-muted);
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.hero-main-heading {
+  font-size: clamp(2.2rem, 4.2vw, 3.6rem);
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  margin-bottom: 16px;
+}
+
+.text-electric-cyan {
+  color: var(--accent);
+  background: linear-gradient(135deg, #ffffff 0%, #00b4d8 60%, #90e0ef 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-acronym-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 14px;
+  border-radius: var(--radius-sm);
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--dark-border);
+  margin-bottom: 24px;
+}
+
+.acronym-title {
+  font-weight: 800;
+  color: var(--accent);
+  letter-spacing: 0.08em;
+  font-size: 0.85rem;
+}
+
+.acronym-divider {
+  color: rgba(255, 255, 255, 0.2);
+}
+
+.acronym-theme {
+  font-size: 0.82rem;
+  color: var(--dark-text-secondary);
+}
+
+/* Metadata Cards Grid */
+.hero-meta-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  margin-bottom: 28px;
+  max-width: 580px;
+}
+
+@media (max-width: 520px) {
+  .hero-meta-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.hero-meta-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  border-radius: var(--radius-md);
+  background-color: rgba(12, 28, 61, 0.7);
+  border: 1px solid var(--dark-border);
+}
+
+.meta-icon-circle {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background-color: rgba(0, 180, 216, 0.12);
+  border: 1px solid rgba(0, 180, 216, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.meta-card-label {
+  display: block;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--dark-muted);
+}
+
+.meta-card-val {
+  display: block;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+/* Actions Row */
+.hero-actions-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+.hero-btn-cta {
+  padding: 14px 28px;
+  font-size: 0.92rem;
+  border-radius: var(--radius-sm);
+}
+
+.btn-text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--accent);
+  padding: 8px 12px;
+  transition: transform var(--transition-fast);
+}
+
+.btn-text-link:hover {
+  transform: translateX(4px);
+  color: #ffffff;
+}
+
+/* IEEE Xplore Note */
+.hero-ieee-xplore-note {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  border-radius: var(--radius-sm);
+  background-color: rgba(0, 98, 155, 0.15);
+  border: 1px solid rgba(0, 98, 155, 0.3);
+  max-width: 600px;
+}
+
+.note-text {
+  font-size: 0.78rem;
+  color: var(--dark-text-secondary);
+  line-height: 1.5;
+}
+
+.note-text strong {
+  color: var(--accent);
+}
+
+/* Tech Graphic Visual */
+.hero-visual-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tech-graphic-container {
+  position: relative;
+  width: 440px;
+  height: 440px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 480px) {
+  .tech-graphic-container {
+    width: 320px;
+    height: 320px;
+  }
+}
+
+.constellation-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+/* Orbit Rings */
+.orbit-ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px dashed rgba(0, 180, 216, 0.2);
+  pointer-events: none;
+}
+
+.ring-outer {
+  width: 380px;
+  height: 380px;
+  animation: rotateRing 40s linear infinite;
+}
+
+.ring-mid {
+  width: 270px;
+  height: 270px;
+  border-color: rgba(0, 98, 155, 0.3);
+  animation: rotateRingRev 28s linear infinite;
+}
+
+.ring-inner {
+  width: 170px;
+  height: 170px;
+  border-style: solid;
+  border-color: rgba(0, 180, 216, 0.25);
+}
+
+@keyframes rotateRing {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes rotateRingRev {
+  from { transform: rotate(360deg); }
+  to { transform: rotate(0deg); }
+}
+
+/* Core Node */
+.core-node {
+  position: relative;
+  z-index: 20;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #0d214a 0%, #07132c 100%);
+  border: 2px solid var(--accent);
+  box-shadow: 0 0 35px rgba(0, 180, 216, 0.4), inset 0 0 20px rgba(0, 180, 216, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.core-icon {
+  color: var(--accent);
+}
+
+.core-caption {
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  color: #ffffff;
+}
+
+/* Satellite Nodes */
+.satellite-node {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(7, 19, 44, 0.85);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(0, 180, 216, 0.35);
+  border-radius: var(--radius-full);
+  padding: 5px 12px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
+  z-index: 15;
+  transition: transform var(--transition-fast);
+}
+
+.satellite-node:hover {
+  transform: scale(1.06);
+  border-color: var(--accent);
+}
+
+.node-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--accent);
+  box-shadow: 0 0 8px var(--accent);
+}
+
+.node-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #ffffff;
+  white-space: nowrap;
+}
+
+.node-ai { top: 30px; left: 10px; }
+.node-cyber { top: 40px; right: 10px; }
+.node-iot { bottom: 60px; right: 20px; }
+.node-green { bottom: 60px; left: 20px; }
+.node-quantum { top: -10px; }
+
+/* Scroll Indicator */
+.hero-scroll-indicator {
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+  z-index: 20;
+  opacity: 0.7;
+  transition: opacity var(--transition-fast);
+}
+
+.hero-scroll-indicator:hover {
+  opacity: 1;
+}
+
+.scroll-caption {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: var(--dark-muted);
+}
+
+.scroll-chevron {
+  color: var(--accent);
+  animation: bounceDown 2s infinite;
+}
+
+@keyframes bounceDown {
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(5px); }
+  60% { transform: translateY(3px); }
+}

@@ -1,0 +1,198 @@
+.about-section {
+  background-color: #ffffff;
+}
+
+.about-overview-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 36px;
+  margin-bottom: 60px;
+  align-items: stretch;
+}
+
+@media (max-width: 960px) {
+  .about-overview-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.about-narrative-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.narrative-heading {
+  font-size: 1.5rem;
+  color: var(--primary);
+  margin-bottom: 14px;
+}
+
+.narrative-paragraph {
+  font-size: 0.98rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+.about-highlights-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.highlight-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.check-icon {
+  color: var(--secondary);
+  flex-shrink: 0;
+}
+
+/* IEEE Quality Box */
+.about-ieee-box {
+  background: linear-gradient(145deg, #07132c, #0d214a);
+  border-radius: var(--radius-lg);
+  padding: 36px;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid rgba(0, 180, 216, 0.25);
+  box-shadow: 0 16px 36px rgba(7, 19, 44, 0.15);
+}
+
+.ieee-box-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.ieee-icon-circle {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(0, 180, 216, 0.15);
+  border: 1.5px solid rgba(0, 180, 216, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.ieee-box-tag {
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  color: var(--accent);
+  display: block;
+}
+
+.ieee-box-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.ieee-box-text {
+  font-size: 0.88rem;
+  color: var(--dark-text-secondary);
+  line-height: 1.65;
+  margin-bottom: 20px;
+}
+
+.ieee-feature-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.f-tag {
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #cbd5e1;
+}
+
+/* Why Attend Section */
+.why-attend-block {
+  padding-top: 20px;
+}
+
+.why-attend-heading {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.why-attend-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 1024px) {
+  .why-attend-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 580px) {
+  .why-attend-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.why-card {
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.why-icon-box {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-sm);
+  background-color: rgba(0, 98, 155, 0.08);
+  border: 1px solid rgba(0, 98, 155, 0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--secondary);
+  margin-bottom: 18px;
+  transition: all var(--transition-fast);
+}
+
+.why-card:hover .why-icon-box {
+  background-color: var(--secondary);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.why-card-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+
+.why-card-desc {
+  font-size: 0.85rem;
+  color: var(--muted);
+  line-height: 1.6;
+}

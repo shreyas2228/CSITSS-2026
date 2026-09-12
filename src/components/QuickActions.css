@@ -1,0 +1,111 @@
+.quick-actions-section {
+  padding: 48px 0;
+  background-color: var(--background);
+  border-bottom: 1px solid var(--border);
+  position: relative;
+  z-index: 20;
+}
+
+.quick-actions-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+}
+
+@media (max-width: 1100px) {
+  .quick-actions-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .quick-actions-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .quick-actions-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.action-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 22px 20px;
+  border-radius: var(--radius-md);
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  text-decoration: none;
+  transition: all var(--transition-normal);
+  min-height: 140px;
+}
+
+.action-card:hover {
+  background-color: #ffffff;
+  border-color: rgba(0, 98, 155, 0.35);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px -4px rgba(7, 19, 44, 0.08);
+}
+
+.action-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.action-icon-box {
+  width: 42px;
+  height: 42px;
+  border-radius: var(--radius-sm);
+  background-color: rgba(0, 98, 155, 0.08);
+  border: 1px solid rgba(0, 98, 155, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--secondary);
+  transition: all var(--transition-fast);
+}
+
+.action-card:hover .action-icon-box {
+  background-color: var(--secondary);
+  color: #ffffff;
+}
+
+.action-arrow-circle {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: var(--surface-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted);
+  transition: all var(--transition-fast);
+}
+
+.action-card:hover .action-arrow-circle {
+  background-color: var(--accent);
+  color: #ffffff;
+  transform: translate(2px, -2px);
+}
+
+.action-card-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+.action-card:hover .action-card-title {
+  color: var(--secondary);
+}
+
+.action-card-desc {
+  font-size: 0.78rem;
+  color: var(--muted);
+  line-height: 1.45;
+}
