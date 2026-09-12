@@ -1,13 +1,2 @@
-.app-root {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  background-color: var(--primary);
-  width: 100%;
-  overflow-x: hidden;
-}
-
-.app-main-content {
-  flex: 1 0 auto;
-  width: 100%;
-}
+.app-root { min-height: 100vh; display: flex; flex-direction: column; background-color: var(--primary); width: 100%; overflow-x: hidden; }
+.app-main-content { flex: 1 0 auto; width: 100%; }
