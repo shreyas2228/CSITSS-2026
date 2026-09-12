@@ -1,7 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Calendar, MapPin, ArrowRight, FileText, ChevronDown, Sparkles, Award } from 'lucide-react';
+import { Calendar, MapPin, ArrowRight, FileText, ChevronDown, Sparkles, Award, Cpu, Shield, Globe, Zap, Radio } from 'lucide-react';
 import { conferenceData } from '../data/conferenceData';
+import Hero3DCanvas from './common/Hero3DCanvas';
+import Tilt3D from './common/Tilt3D';
 import './Hero.css';
 
 export default function Hero() {
@@ -19,10 +21,11 @@ export default function Hero() {
 
   return (
     <section id="home" className="hero-section section-dark">
-      {/* Background Tech Circuit Grid & Glow Elements */}
+      {/* Background Tech Circuit Grid & Dynamic 3D Glow Orbs */}
       <div className="hero-bg-grid"></div>
       <div className="hero-glow-orb orb-1"></div>
       <div className="hero-glow-orb orb-2"></div>
+      <div className="hero-3d-grid-plane"></div>
 
       <div className="container hero-container">
         {/* Left: Academic & Conference Identity */}
@@ -48,7 +51,7 @@ export default function Hero() {
             <p className="hero-super-title">INTERNATIONAL CONFERENCE ON</p>
             <h1 className="hero-heading hero-main-heading">
               Next-Generation Computing & <br />
-              <span className="text-electric-cyan">Sustainable Technology</span>
+              <span className="text-electric-cyan text-glow-3d">Sustainable Technology</span>
             </h1>
             <div className="hero-acronym-badge">
               <span className="acronym-title">{conference.acronym}</span>
@@ -57,32 +60,36 @@ export default function Hero() {
             </div>
           </motion.div>
 
-          {/* Step 3: Metadata (Date, Venue) */}
+          {/* Step 3: 3D Tilt Metadata Cards (Date, Venue) */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             className="hero-meta-grid"
           >
-            <div className="hero-meta-card">
-              <div className="meta-icon-circle">
-                <Calendar size={18} className="meta-icon" />
+            <Tilt3D maxTilt={14} scale={1.04} className="hero-meta-tilt">
+              <div className="hero-meta-card">
+                <div className="meta-icon-circle">
+                  <Calendar size={18} className="meta-icon" />
+                </div>
+                <div className="meta-card-text">
+                  <span className="meta-card-label">CONFERENCE DATES</span>
+                  <span className="meta-card-val">{conference.dates}</span>
+                </div>
               </div>
-              <div className="meta-card-text">
-                <span className="meta-card-label">CONFERENCE DATES</span>
-                <span className="meta-card-val">{conference.dates}</span>
-              </div>
-            </div>
+            </Tilt3D>
 
-            <div className="hero-meta-card">
-              <div className="meta-icon-circle">
-                <MapPin size={18} className="meta-icon" />
+            <Tilt3D maxTilt={14} scale={1.04} className="hero-meta-tilt">
+              <div className="hero-meta-card">
+                <div className="meta-icon-circle">
+                  <MapPin size={18} className="meta-icon" />
+                </div>
+                <div className="meta-card-text">
+                  <span className="meta-card-label">HOST INSTITUTION</span>
+                  <span className="meta-card-val">NIE Campus, Mysuru, India</span>
+                </div>
               </div>
-              <div className="meta-card-text">
-                <span className="meta-card-label">HOST INSTITUTION</span>
-                <span className="meta-card-val">NIE Campus, Mysuru, India</span>
-              </div>
-            </div>
+            </Tilt3D>
           </motion.div>
 
           {/* Step 4: CTAs & Buttons */}
@@ -95,7 +102,7 @@ export default function Hero() {
             <a
               href="#registration"
               onClick={(e) => { e.preventDefault(); scrollTo('registration'); }}
-              className="btn btn-accent hero-btn-cta"
+              className="btn btn-accent hero-btn-cta btn-3d-depth"
             >
               <span>Register Now</span>
               <ArrowRight size={16} />
@@ -104,7 +111,7 @@ export default function Hero() {
             <a
               href="#publication"
               onClick={(e) => { e.preventDefault(); scrollTo('publication'); }}
-              className="btn btn-outline-white hero-btn-cta"
+              className="btn btn-outline-white hero-btn-cta btn-3d-depth"
             >
               <FileText size={16} />
               <span>Submit Paper</span>
@@ -134,60 +141,75 @@ export default function Hero() {
           </motion.div>
         </div>
 
-        {/* Right: Abstract Technology Visual Graphic */}
+        {/* Right: 3D Interactive Constellation Graphic & Floating Holographic Badges */}
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.25 }}
           className="hero-visual-wrapper"
         >
-          <div className="tech-graphic-container">
-            {/* Concentric Research Orbit Rings */}
-            <div className="orbit-ring ring-outer"></div>
-            <div className="orbit-ring ring-mid"></div>
-            <div className="orbit-ring ring-inner"></div>
+          <div className="tech-graphic-container-3d">
+            {/* Interactive 3D Canvas Constellation Sphere */}
+            <Hero3DCanvas />
 
-            {/* Central Hexagon Core */}
-            <div className="core-node">
-              <Sparkles size={28} className="core-icon" />
-              <span className="core-caption">IEEE • NIE</span>
+            {/* Central 3D Core Node */}
+            <div className="core-node-3d">
+              <div className="core-glow-pulse"></div>
+              <Sparkles size={30} className="core-icon-3d" />
+              <span className="core-caption-3d">IEEE • NIE</span>
+              <span className="core-sub-3d">ICNCST 2026</span>
             </div>
 
-            {/* Orbiting Satellite Tech Nodes */}
-            <div className="satellite-node node-ai">
-              <div className="node-dot"></div>
-              <span className="node-label">AI & Robotics</span>
+            {/* 3D Floating Depth Satellite Badges */}
+            <div className="satellite-3d-node node-3d-ai">
+              <div className="satellite-icon-wrap icon-ai">
+                <Cpu size={15} />
+              </div>
+              <div className="satellite-content">
+                <span className="satellite-title">AI & Robotics</span>
+                <span className="satellite-status">Track 01</span>
+              </div>
             </div>
 
-            <div className="satellite-node node-cyber">
-              <div className="node-dot"></div>
-              <span className="node-label">Cyber Defense</span>
+            <div className="satellite-3d-node node-3d-cyber">
+              <div className="satellite-icon-wrap icon-cyber">
+                <Shield size={15} />
+              </div>
+              <div className="satellite-content">
+                <span className="satellite-title">Cyber Defense</span>
+                <span className="satellite-status">Track 03</span>
+              </div>
             </div>
 
-            <div className="satellite-node node-iot">
-              <div className="node-dot"></div>
-              <span className="node-label">Edge & IoT</span>
+            <div className="satellite-3d-node node-3d-iot">
+              <div className="satellite-icon-wrap icon-iot">
+                <Radio size={15} />
+              </div>
+              <div className="satellite-content">
+                <span className="satellite-title">Edge & IoT</span>
+                <span className="satellite-status">Track 04</span>
+              </div>
             </div>
 
-            <div className="satellite-node node-green">
-              <div className="node-dot"></div>
-              <span className="node-label">Clean Energy</span>
+            <div className="satellite-3d-node node-3d-green">
+              <div className="satellite-icon-wrap icon-green">
+                <Zap size={15} />
+              </div>
+              <div className="satellite-content">
+                <span className="satellite-title">Clean Energy</span>
+                <span className="satellite-status">Track 05</span>
+              </div>
             </div>
 
-            <div className="satellite-node node-quantum">
-              <div className="node-dot"></div>
-              <span className="node-label">Next-Gen Networks</span>
+            <div className="satellite-3d-node node-3d-network">
+              <div className="satellite-icon-wrap icon-network">
+                <Globe size={15} />
+              </div>
+              <div className="satellite-content">
+                <span className="satellite-title">6G Telecom</span>
+                <span className="satellite-status">Track 06</span>
+              </div>
             </div>
-
-            {/* Geometric SVG Constellation Lines */}
-            <svg className="constellation-svg" viewBox="0 0 440 440" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <line x1="220" y1="220" x2="80" y2="100" stroke="rgba(0, 180, 216, 0.4)" strokeDasharray="4 4" />
-              <line x1="220" y1="220" x2="360" y2="110" stroke="rgba(0, 180, 216, 0.4)" strokeDasharray="4 4" />
-              <line x1="220" y1="220" x2="380" y2="310" stroke="rgba(0, 180, 216, 0.4)" strokeDasharray="4 4" />
-              <line x1="220" y1="220" x2="80" y2="330" stroke="rgba(0, 180, 216, 0.4)" strokeDasharray="4 4" />
-              <line x1="220" y1="220" x2="220" y2="50" stroke="rgba(0, 180, 216, 0.4)" strokeDasharray="4 4" />
-              <polygon points="220,130 310,180 310,260 220,310 130,260 130,180" stroke="rgba(0, 98, 155, 0.5)" strokeWidth="1.5" />
-            </svg>
           </div>
         </motion.div>
       </div>

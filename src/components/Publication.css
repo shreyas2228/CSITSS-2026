@@ -125,16 +125,28 @@
 .pub-visual-col {
   display: flex;
   justify-content: center;
+  perspective: 1200px;
+}
+
+.pub-tilt-wrapper {
+  width: 100%;
+  max-width: 440px;
 }
 
 .doc-visualization-card {
   width: 100%;
-  max-width: 440px;
   border-radius: var(--radius-md);
   background-color: #0c1c3d;
   border: 1px solid rgba(0, 180, 216, 0.35);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 0 25px rgba(0, 180, 216, 0.15);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.6), 0 0 30px rgba(0, 180, 216, 0.2);
   overflow: hidden;
+  transform-style: preserve-3d;
+  transition: all 0.3s ease;
+}
+
+.pub-tilt-wrapper:hover .doc-visualization-card {
+  border-color: var(--accent);
+  box-shadow: 0 35px 70px rgba(0, 0, 0, 0.75), 0 0 45px rgba(0, 180, 216, 0.35);
 }
 
 .doc-top-bar {
@@ -144,6 +156,7 @@
   padding: 10px 16px;
   background-color: #08142b;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  transform: translateZ(16px);
 }
 
 .doc-indicator-dots {
@@ -287,4 +300,5 @@
   font-size: 0.72rem;
   font-weight: 700;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  transform: translateZ(28px);
 }

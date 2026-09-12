@@ -12,6 +12,7 @@ import {
   CheckCircle 
 } from 'lucide-react';
 import { conferenceData } from '../data/conferenceData';
+import Tilt3D from './common/Tilt3D';
 import './Tracks.css';
 
 const trackIcons = [
@@ -38,7 +39,7 @@ export default function Tracks() {
           </p>
         </div>
 
-        {/* Tracks Grid */}
+        {/* Tracks Grid with 3D Tilt */}
         <div className="tracks-grid">
           {tracks.map((track, idx) => {
             const IconComp = trackIcons[idx % trackIcons.length];
@@ -49,77 +50,92 @@ export default function Tracks() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: idx * 0.08 }}
-                onClick={() => setActiveTrack(track)}
-                className="track-card card"
+                className="track-tilt-item"
               >
-                <div className="track-card-top">
-                  <span className="track-index">TRACK {track.number}</span>
-                  <div className="track-icon-wrap">
-                    <IconComp size={22} />
-                  </div>
-                </div>
+                <Tilt3D maxTilt={14} scale={1.03} className="track-card-tilt">
+                  <div
+                    onClick={() => setActiveTrack(track)}
+                    className="track-card card"
+                  >
+                    <div className="track-card-top">
+                      <span className="track-index">TRACK {track.number}</span>
+                      <div className="track-icon-wrap">
+                        <IconComp size={22} />
+                      </div>
+                    </div>
 
-                <h3 className="track-card-title">{track.title}</h3>
-                <p className="track-card-desc">{track.description}</p>
+                    <h3 className="track-title">{track.title}</h3>
+                    <p className="track-desc">{track.description}</p>
 
-                <div className="track-card-footer">
-                  <span className="subtopics-count">{track.topics.length} Research Subtopics</span>
-                  <div className="track-arrow-btn">
-                    <ArrowRight size={15} />
+                    <div className="track-subtopics-preview">
+                      <span className="subtopics-count">{track.topics.length} Targeted Topics</span>
+                      <ul className="preview-list">
+                        {track.topics.slice(0, 3).map((topic, tIdx) => (
+                          <li key={tIdx}>{topic}</li>
+                        ))}
+                      </ul>
+                    </div>
+
+                    <div className="track-card-bottom">
+                      <span className="explore-text">Explore All Topics</span>
+                      <div className="explore-arrow">
+                        <ArrowRight size={14} />
+                      </div>
+                    </div>
                   </div>
-                </div>
+                </Tilt3D>
               </motion.div>
             );
           })}
         </div>
       </div>
 
-      {/* Subtopics Modal */}
+      {/* Track Details Modal */}
       <AnimatePresence>
         {activeTrack && (
           <div className="modal-backdrop" onClick={() => setActiveTrack(null)}>
             <motion.div
-              initial={{ opacity: 0, scale: 0.95, y: 20 }}
-              animate={{ opacity: 1, scale: 1, y: 0 }}
-              exit={{ opacity: 0, scale: 0.95, y: 20 }}
-              transition={{ duration: 0.25 }}
-              className="modal-box track-modal"
+              initial={{ opacity: 0, scale: 0.92, y: 20, rotateX: 6 }}
+              animate={{ opacity: 1, scale: 1, y: 0, rotateX: 0 }}
+              exit={{ opacity: 0, scale: 0.92, y: 20, rotateX: 6 }}
+              transition={{ duration: 0.28, ease: 'easeOut' }}
+              className="modal-box track-modal modal-3d-box"
               onClick={(e) => e.stopPropagation()}
             >
               <button
                 className="modal-close-btn"
                 onClick={() => setActiveTrack(null)}
-                aria-label="Close Track Details"
+                aria-label="Close Modal"
               >
                 <X size={20} />
               </button>
 
               <div className="track-modal-header">
-                <span className="track-modal-tag">TRACK {activeTrack.number}</span>
-                <h3 className="track-modal-title">{activeTrack.title}</h3>
-                <p className="track-modal-desc">{activeTrack.description}</p>
+                <span className="track-badge">TRACK {activeTrack.number}</span>
+                <h3 className="modal-track-heading">{activeTrack.title}</h3>
+                <p className="modal-track-desc">{activeTrack.description}</p>
               </div>
 
-              <div className="track-subtopics-list">
-                <h4 className="subtopics-heading">Scope & Representative Topics:</h4>
-                <div className="subtopics-grid">
-                  {activeTrack.topics.map((topic, i) => (
-                    <div key={i} className="subtopic-item">
-                      <CheckCircle size={16} className="subtopic-check" />
-                      <span>{topic}</span>
+              <div className="track-modal-body">
+                <h4 className="topics-list-heading">Target Research Topics</h4>
+                <div className="modal-topics-grid">
+                  {activeTrack.topics.map((item, tIdx) => (
+                    <div key={tIdx} className="modal-topic-item">
+                      <CheckCircle size={16} className="topic-bullet-icon" />
+                      <span>{item}</span>
                     </div>
                   ))}
                 </div>
-              </div>
 
-              <div className="track-modal-action">
-                <a
-                  href="#publication"
-                  onClick={() => setActiveTrack(null)}
-                  className="btn btn-primary"
-                >
-                  View Submission Guidelines & Format
-                </a>
+                <div className="modal-action-row">
+                  <a
+                    href="#publication"
+                    onClick={() => setActiveTrack(null)}
+                    className="btn btn-primary"
+                  >
+                    View Submission Guidelines <ArrowRight size={15} />
+                  </a>
+                </div>
               </div>
             </motion.div>
           </div>

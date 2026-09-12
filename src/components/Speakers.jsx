@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Award, Building, BookOpen, Sparkles, ExternalLink } from 'lucide-react';
 import { conferenceData } from '../data/conferenceData';
+import Tilt3D from './common/Tilt3D';
 import './Speakers.css';
 
 export default function Speakers() {
@@ -19,7 +20,7 @@ export default function Speakers() {
           </p>
         </div>
 
-        {/* Speakers Grid */}
+        {/* Speakers Grid with 3D Tilt */}
         <div className="speakers-grid">
           {speakers.map((speaker, idx) => (
             <motion.div
@@ -28,34 +29,40 @@ export default function Speakers() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: idx * 0.1 }}
-              onClick={() => setSelectedSpeaker(speaker)}
-              className="speaker-card card"
+              className="speaker-tilt-item"
             >
-              <div className="speaker-image-box">
-                <img
-                  src={speaker.image}
-                  alt={speaker.name}
-                  className="speaker-thumb"
-                  loading="lazy"
-                />
-                <span className="speaker-role-pill">{speaker.role}</span>
-              </div>
+              <Tilt3D maxTilt={12} scale={1.03} className="speaker-card-tilt">
+                <div
+                  className="speaker-card card"
+                  onClick={() => setSelectedSpeaker(speaker)}
+                >
+                  <div className="speaker-image-box">
+                    <img
+                      src={speaker.image}
+                      alt={speaker.name}
+                      className="speaker-thumb"
+                      loading="lazy"
+                    />
+                    <span className="speaker-role-pill">{speaker.role}</span>
+                  </div>
 
-              <div className="speaker-info">
-                <h3 className="speaker-full-name">{speaker.name}</h3>
-                <p className="speaker-post">{speaker.designation}</p>
-                <div className="speaker-inst-row">
-                  <Building size={14} className="inst-icon" />
-                  <span>{speaker.institution}</span>
+                  <div className="speaker-info">
+                    <h3 className="speaker-full-name">{speaker.name}</h3>
+                    <p className="speaker-post">{speaker.designation}</p>
+                    <div className="speaker-inst-row">
+                      <Building size={14} className="inst-icon" />
+                      <span>{speaker.institution}</span>
+                    </div>
+                    <div className="speaker-area-tag">
+                      <span>{speaker.researchArea}</span>
+                    </div>
+                    <button className="speaker-view-btn" type="button">
+                      <span>View Keynote Abstract</span>
+                      <ExternalLink size={13} />
+                    </button>
+                  </div>
                 </div>
-                <div className="speaker-area-tag">
-                  <span>{speaker.researchArea}</span>
-                </div>
-                <button className="speaker-view-btn">
-                  <span>View Keynote Abstract</span>
-                  <ExternalLink size={13} />
-                </button>
-              </div>
+              </Tilt3D>
             </motion.div>
           ))}
         </div>
@@ -66,11 +73,11 @@ export default function Speakers() {
         {selectedSpeaker && (
           <div className="modal-backdrop" onClick={() => setSelectedSpeaker(null)}>
             <motion.div
-              initial={{ opacity: 0, scale: 0.95, y: 20 }}
-              animate={{ opacity: 1, scale: 1, y: 0 }}
-              exit={{ opacity: 0, scale: 0.95, y: 20 }}
-              transition={{ duration: 0.25 }}
-              className="modal-box speaker-modal"
+              initial={{ opacity: 0, scale: 0.92, y: 20, rotateX: 6 }}
+              animate={{ opacity: 1, scale: 1, y: 0, rotateX: 0 }}
+              exit={{ opacity: 0, scale: 0.92, y: 20, rotateX: 6 }}
+              transition={{ duration: 0.28, ease: 'easeOut' }}
+              className="modal-box speaker-modal modal-3d-box"
               onClick={(e) => e.stopPropagation()}
             >
               <button
@@ -99,19 +106,14 @@ export default function Speakers() {
                   <p className="modal-speaker-desig">{selectedSpeaker.designation}</p>
                   <p className="modal-speaker-inst">{selectedSpeaker.institution}</p>
 
-                  <div className="modal-keynote-banner">
-                    <span className="keynote-tag">KEYNOTE TALK</span>
-                    <h4 className="keynote-talk-title">{selectedSpeaker.keynoteTitle}</h4>
+                  <div className="modal-topic-box">
+                    <div className="topic-badge">KEYNOTE PRESENTATION</div>
+                    <h4 className="topic-title">"{selectedSpeaker.keynoteTitle}"</h4>
                   </div>
 
                   <div className="modal-bio-block">
-                    <h5 className="modal-subheading">Biography</h5>
-                    <p className="modal-bio-text">{selectedSpeaker.bio}</p>
-                  </div>
-
-                  <div className="modal-research-block">
-                    <h5 className="modal-subheading">Primary Research Domain</h5>
-                    <span className="domain-chip">{selectedSpeaker.researchArea}</span>
+                    <h5 className="bio-subhead">Scholar Biography</h5>
+                    <p className="bio-text">{selectedSpeaker.bio}</p>
                   </div>
                 </div>
               </div>

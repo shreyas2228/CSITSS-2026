@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { BookOpen, ShieldAlert, FileText, CheckCircle2, ExternalLink, ArrowRight } from 'lucide-react';
 import { conferenceData } from '../data/conferenceData';
+import Tilt3D from './common/Tilt3D';
 import './Publication.css';
 
 export default function Publication() {
@@ -13,7 +14,7 @@ export default function Publication() {
         <div className="publication-grid">
           {/* Left: Scientific Publishing & IEEE Compliance */}
           <div className="pub-content-col">
-            <span className="section-badge">INDEXING & PROCEEDINGS</span>
+            <span className="section-badge-dark">INDEXING & PROCEEDINGS</span>
             <h2 className="section-title text-white">Publication in IEEE Xplore</h2>
             
             {/* Disclaimer Alert Box */}
@@ -59,7 +60,7 @@ export default function Publication() {
                 href={conference.cmtUrl}
                 target="_blank"
                 rel="noreferrer"
-                className="btn btn-accent"
+                className="btn btn-accent btn-3d-depth"
               >
                 <span>Submit via Microsoft CMT</span>
                 <ExternalLink size={15} />
@@ -69,7 +70,7 @@ export default function Publication() {
                 href={publication.templatesUrl}
                 target="_blank"
                 rel="noreferrer"
-                className="btn btn-outline-white"
+                className="btn btn-outline-white btn-3d-depth"
               >
                 <FileText size={15} />
                 <span>IEEE Manuscript Templates</span>
@@ -77,60 +78,62 @@ export default function Publication() {
             </div>
           </div>
 
-          {/* Right: Abstract Document Visualization Graphic */}
+          {/* Right: 3D Abstract Document Visualization Graphic */}
           <div className="pub-visual-col">
-            <div className="doc-visualization-card">
-              <div className="doc-top-bar">
-                <div className="doc-indicator-dots">
-                  <span></span><span></span><span></span>
-                </div>
-                <span className="doc-type-label">IEEE_CONFERENCE_TEMPLATE.PDF</span>
-              </div>
-
-              <div className="doc-paper-sheet">
-                <div className="doc-header-strip">
-                  <div className="doc-ieee-stamp">IEEE</div>
-                  <div className="doc-title-placeholder"></div>
-                  <div className="doc-authors-placeholder"></div>
+            <Tilt3D maxTilt={18} scale={1.04} className="pub-tilt-wrapper">
+              <div className="doc-visualization-card">
+                <div className="doc-top-bar">
+                  <div className="doc-indicator-dots">
+                    <span></span><span></span><span></span>
+                  </div>
+                  <span className="doc-type-label">IEEE_CONFERENCE_TEMPLATE.PDF</span>
                 </div>
 
-                <div className="doc-columns-grid">
-                  <div className="doc-column">
-                    <div className="doc-h-bar"></div>
-                    <div className="doc-text-line"></div>
-                    <div className="doc-text-line"></div>
-                    <div className="doc-text-line short"></div>
-                    <div className="doc-diagram-box">
-                      <div className="diag-line diag-1"></div>
-                      <div className="diag-line diag-2"></div>
-                      <span className="diag-caption">Figure 1. Architecture</span>
-                    </div>
-                    <div className="doc-text-line"></div>
-                    <div className="doc-text-line"></div>
+                <div className="doc-paper-sheet">
+                  <div className="doc-header-strip">
+                    <div className="doc-ieee-stamp">IEEE</div>
+                    <div className="doc-title-placeholder"></div>
+                    <div className="doc-authors-placeholder"></div>
                   </div>
 
-                  <div className="doc-column">
-                    <div className="doc-h-bar"></div>
-                    <div className="doc-text-line"></div>
-                    <div className="doc-text-line"></div>
-                    <div className="doc-text-line"></div>
-                    <div className="doc-table-box">
-                      <div className="table-row-bar"></div>
-                      <div className="table-row-bar"></div>
-                      <div className="table-row-bar"></div>
-                      <span className="diag-caption">Table I. Evaluation</span>
+                  <div className="doc-columns-grid">
+                    <div className="doc-column">
+                      <div className="doc-h-bar"></div>
+                      <div className="doc-text-line"></div>
+                      <div className="doc-text-line"></div>
+                      <div className="doc-text-line short"></div>
+                      <div className="doc-diagram-box">
+                        <div className="diag-line diag-1"></div>
+                        <div className="diag-line diag-2"></div>
+                        <span className="diag-caption">Figure 1. Architecture</span>
+                      </div>
+                      <div className="doc-text-line"></div>
+                      <div className="doc-text-line"></div>
                     </div>
-                    <div className="doc-text-line"></div>
-                    <div className="doc-text-line short"></div>
+
+                    <div className="doc-column">
+                      <div className="doc-h-bar"></div>
+                      <div className="doc-text-line"></div>
+                      <div className="doc-text-line"></div>
+                      <div className="doc-text-line"></div>
+                      <div className="doc-table-box">
+                        <div className="table-row-bar"></div>
+                        <div className="table-row-bar"></div>
+                        <div className="table-row-bar"></div>
+                        <span className="diag-caption">Table I. Evaluation</span>
+                      </div>
+                      <div className="doc-text-line"></div>
+                      <div className="doc-text-line short"></div>
+                    </div>
+                  </div>
+
+                  <div className="doc-verified-badge">
+                    <BookOpen size={16} />
+                    <span>IEEE Xplore Scoped</span>
                   </div>
                 </div>
-
-                <div className="doc-verified-badge">
-                  <BookOpen size={16} />
-                  <span>IEEE Xplore Scoped</span>
-                </div>
               </div>
-            </div>
+            </Tilt3D>
           </div>
         </div>
       </div>

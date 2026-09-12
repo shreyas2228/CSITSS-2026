@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Lightbulb, Users2, BookOpenCheck, Building2, CheckCircle2, ShieldCheck } from 'lucide-react';
 import { conferenceData } from '../data/conferenceData';
+import Tilt3D from './common/Tilt3D';
 import './About.css';
 
 const iconMap = {
@@ -57,34 +58,36 @@ export default function About() {
           </div>
 
           {/* Right: IEEE Standards & Compliance Callout */}
-          <div className="about-ieee-box">
-            <div className="ieee-box-header">
-              <div className="ieee-icon-circle">
-                <ShieldCheck size={24} />
+          <Tilt3D maxTilt={10} scale={1.02} className="about-ieee-tilt">
+            <div className="about-ieee-box">
+              <div className="ieee-box-header">
+                <div className="ieee-icon-circle">
+                  <ShieldCheck size={24} />
+                </div>
+                <div>
+                  <span className="ieee-box-tag">IEEE QUALITY ASSURANCE</span>
+                  <h4 className="ieee-box-title">Academic & Technical Rigor</h4>
+                </div>
               </div>
-              <div>
-                <span className="ieee-box-tag">IEEE QUALITY ASSURANCE</span>
-                <h4 className="ieee-box-title">Academic & Technical Rigor</h4>
+              <p className="ieee-box-text">
+                ICNCST 2026 adheres strictly to the publication ethics, review rigor, and formatting standards mandated by the IEEE. Every accepted paper is subjected to multi-reviewer technical scrutiny.
+              </p>
+              <div className="ieee-feature-tags">
+                <span className="f-tag">Single-Blind Review</span>
+                <span className="f-tag">CrossCheck Verified</span>
+                <span className="f-tag">IEEE Xplore Scope</span>
+                <span className="f-tag">Best Paper Awards</span>
+              </div>
+              <div className="ieee-cta-wrap">
+                <a href="#tracks" className="btn btn-secondary" style={{ width: '100%' }}>
+                  Explore Research Tracks
+                </a>
               </div>
             </div>
-            <p className="ieee-box-text">
-              ICNCST 2026 adheres strictly to the publication ethics, review rigor, and formatting standards mandated by the IEEE. Every accepted paper is subjected to multi-reviewer technical scrutiny.
-            </p>
-            <div className="ieee-feature-tags">
-              <span className="f-tag">Single-Blind Review</span>
-              <span className="f-tag">CrossCheck Verified</span>
-              <span className="f-tag">IEEE Xplore Scope</span>
-              <span className="f-tag">Best Paper Awards</span>
-            </div>
-            <div className="ieee-cta-wrap">
-              <a href="#tracks" className="btn btn-secondary" style={{ width: '100%' }}>
-                Explore Research Tracks
-              </a>
-            </div>
-          </div>
+          </Tilt3D>
         </div>
 
-        {/* Why Attend Grid (4 Cards) */}
+        {/* Why Attend Grid with 3D Tilt Cards */}
         <div className="why-attend-block">
           <h3 className="why-attend-heading">Why Attend ICNCST 2026?</h3>
           <div className="why-attend-grid">
@@ -97,13 +100,17 @@ export default function About() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: idx * 0.1 }}
-                  className="why-card card"
+                  className="why-tilt-item"
                 >
-                  <div className="why-icon-box">
-                    <IconComp size={24} />
-                  </div>
-                  <h4 className="why-card-title">{item.title}</h4>
-                  <p className="why-card-desc">{item.desc}</p>
+                  <Tilt3D maxTilt={15} scale={1.04} className="why-card-tilt">
+                    <div className="why-card card">
+                      <div className="why-icon-box">
+                        <IconComp size={24} />
+                      </div>
+                      <h4 className="why-card-title">{item.title}</h4>
+                      <p className="why-card-desc">{item.desc}</p>
+                    </div>
+                  </Tilt3D>
                 </motion.div>
               );
             })}

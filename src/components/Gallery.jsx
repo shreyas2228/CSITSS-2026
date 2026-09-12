@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Camera, X, ChevronLeft, ChevronRight, Maximize2, Sparkles } from 'lucide-react';
 import { conferenceData } from '../data/conferenceData';
+import Tilt3D from './common/Tilt3D';
 import './Gallery.css';
 
 export default function Gallery() {
@@ -59,33 +60,39 @@ export default function Gallery() {
           ))}
         </div>
 
-        {/* Gallery Masonry Grid */}
+        {/* Gallery Masonry Grid with 3D Tilt */}
         <div className="gallery-grid">
           {filteredImages.map((item, index) => (
             <motion.div
               key={item.id}
-              className="gallery-card"
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: index * 0.08 }}
-              onClick={() => openLightbox(index)}
+              className="gallery-tilt-item"
             >
-              <div className="gallery-image-wrapper">
-                <img
-                  src={item.image}
-                  alt={item.title}
-                  className="gallery-image"
-                  loading="lazy"
-                />
-                <div className="gallery-card-overlay">
-                  <span className="gallery-cat-chip">{item.category}</span>
-                  <h4 className="gallery-card-title">{item.title}</h4>
-                  <div className="gallery-zoom-icon">
-                    <Maximize2 size={18} />
+              <Tilt3D maxTilt={14} scale={1.03} className="gallery-card-tilt">
+                <div
+                  className="gallery-card"
+                  onClick={() => openLightbox(index)}
+                >
+                  <div className="gallery-image-wrapper">
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="gallery-image"
+                      loading="lazy"
+                    />
+                    <div className="gallery-card-overlay">
+                      <span className="gallery-cat-chip">{item.category}</span>
+                      <h4 className="gallery-card-title">{item.title}</h4>
+                      <div className="gallery-zoom-icon">
+                        <Maximize2 size={18} />
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </Tilt3D>
             </motion.div>
           ))}
         </div>
@@ -100,7 +107,14 @@ export default function Gallery() {
               exit={{ opacity: 0 }}
               onClick={closeLightbox}
             >
-              <div className="lightbox-content" onClick={(e) => e.stopPropagation()}>
+              <motion.div
+                className="lightbox-content"
+                initial={{ scale: 0.9, y: 20, rotateX: 6 }}
+                animate={{ scale: 1, y: 0, rotateX: 0 }}
+                exit={{ scale: 0.9, y: 20, rotateX: 6 }}
+                transition={{ duration: 0.28 }}
+                onClick={(e) => e.stopPropagation()}
+              >
                 <button
                   type="button"
                   className="lightbox-close-btn"
@@ -143,7 +157,7 @@ export default function Gallery() {
                 >
                   <ChevronRight size={28} />
                 </button>
-              </div>
+              </motion.div>
             </motion.div>
           )}
         </AnimatePresence>

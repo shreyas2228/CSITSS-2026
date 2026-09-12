@@ -11,6 +11,14 @@
   margin-top: 50px;
 }
 
+.award-tilt-item {
+  height: 100%;
+}
+
+.award-card-tilt {
+  height: 100%;
+}
+
 .award-card {
   position: relative;
   background: #ffffff;
@@ -19,20 +27,25 @@
   padding: 36px 28px 28px;
   display: flex;
   flex-direction: column;
-  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  height: 100%;
+  transform-style: preserve-3d;
   box-shadow: 0 4px 20px rgba(7, 19, 44, 0.04);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.award-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 16px 36px rgba(7, 19, 44, 0.1);
-  border-color: rgba(0, 98, 155, 0.3);
+.award-card-tilt:hover .award-card {
+  box-shadow: 0 20px 45px rgba(7, 19, 44, 0.12), 0 0 25px rgba(0, 180, 216, 0.12);
+  border-color: rgba(0, 98, 155, 0.35);
 }
 
 .award-card.is-grand-award {
   border: 2px solid #f59e0b;
   background: linear-gradient(180deg, #ffffff 0%, #fffbeb 100%);
   box-shadow: 0 10px 30px rgba(245, 158, 11, 0.15);
+}
+
+.award-card-tilt:hover .award-card.is-grand-award {
+  box-shadow: 0 22px 50px rgba(245, 158, 11, 0.25), 0 0 30px rgba(245, 158, 11, 0.2);
 }
 
 .grand-award-banner {
@@ -49,7 +62,8 @@
   display: inline-flex;
   align-items: center;
   gap: 5px;
-  box-shadow: 0 4px 10px rgba(217, 119, 6, 0.35);
+  box-shadow: 0 4px 12px rgba(217, 119, 6, 0.4);
+  transform: translateZ(30px);
 }
 
 .award-icon-box {
@@ -63,15 +77,18 @@
   margin-bottom: 24px;
   color: var(--secondary);
   transition: all 0.3s ease;
+  transform: translateZ(24px);
+  box-shadow: 0 2px 10px rgba(0, 98, 155, 0.1);
 }
 
 .is-grand-award .award-icon-box {
   background: rgba(245, 158, 11, 0.15);
   color: #d97706;
+  box-shadow: 0 2px 10px rgba(217, 119, 6, 0.15);
 }
 
-.award-card:hover .award-icon-box {
-  transform: scale(1.08) rotate(-4deg);
+.award-card-tilt:hover .award-icon-box {
+  transform: translateZ(32px) scale(1.1) rotate(-4deg);
 }
 
 .award-title {
@@ -80,6 +97,7 @@
   color: var(--primary);
   margin-bottom: 12px;
   line-height: 1.35;
+  transform: translateZ(18px);
 }
 
 .award-description {
@@ -88,6 +106,7 @@
   line-height: 1.6;
   margin-bottom: 24px;
   flex-grow: 1;
+  transform: translateZ(10px);
 }
 
 .award-eligibility-block {
@@ -96,6 +115,7 @@
   padding: 14px 16px;
   border-left: 3px solid var(--secondary);
   margin-bottom: 20px;
+  transform: translateZ(16px);
 }
 
 .is-grand-award .award-eligibility-block {
@@ -133,6 +153,7 @@
 .award-footer {
   padding-top: 16px;
   border-top: 1px solid var(--border);
+  transform: translateZ(14px);
 }
 
 .award-citation-tag {

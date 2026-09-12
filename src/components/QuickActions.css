@@ -30,6 +30,10 @@
   }
 }
 
+.action-tilt-wrapper {
+  height: 100%;
+}
+
 .action-card {
   display: flex;
   flex-direction: column;
@@ -39,15 +43,17 @@
   background-color: var(--surface);
   border: 1px solid var(--border);
   text-decoration: none;
-  transition: all var(--transition-normal);
   min-height: 140px;
+  height: 100%;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 16px rgba(7, 19, 44, 0.04);
+  transition: background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
-.action-card:hover {
+.action-tilt-wrapper:hover .action-card {
   background-color: #ffffff;
-  border-color: rgba(0, 98, 155, 0.35);
-  transform: translateY(-4px);
-  box-shadow: 0 12px 28px -4px rgba(7, 19, 44, 0.08);
+  border-color: rgba(0, 98, 155, 0.4);
+  box-shadow: 0 16px 36px rgba(7, 19, 44, 0.12), 0 0 15px rgba(0, 180, 216, 0.1);
 }
 
 .action-card-top {
@@ -55,6 +61,7 @@
   align-items: center;
   justify-content: space-between;
   margin-bottom: 16px;
+  transform: translateZ(24px);
 }
 
 .action-icon-box {
@@ -68,11 +75,13 @@
   justify-content: center;
   color: var(--secondary);
   transition: all var(--transition-fast);
+  box-shadow: 0 2px 8px rgba(0, 98, 155, 0.1);
 }
 
-.action-card:hover .action-icon-box {
+.action-tilt-wrapper:hover .action-icon-box {
   background-color: var(--secondary);
   color: #ffffff;
+  transform: scale(1.1);
 }
 
 .action-arrow-circle {
@@ -87,10 +96,14 @@
   transition: all var(--transition-fast);
 }
 
-.action-card:hover .action-arrow-circle {
+.action-tilt-wrapper:hover .action-arrow-circle {
   background-color: var(--accent);
   color: #ffffff;
-  transform: translate(2px, -2px);
+  transform: translate(2px, -2px) scale(1.08);
+}
+
+.action-card-content {
+  transform: translateZ(18px);
 }
 
 .action-card-title {
@@ -98,14 +111,12 @@
   font-weight: 700;
   color: var(--text);
   margin-bottom: 4px;
-}
-
-.action-card:hover .action-card-title {
-  color: var(--secondary);
+  line-height: 1.3;
 }
 
 .action-card-desc {
   font-size: 0.78rem;
   color: var(--muted);
-  line-height: 1.45;
+  line-height: 1.4;
+  margin: 0;
 }
