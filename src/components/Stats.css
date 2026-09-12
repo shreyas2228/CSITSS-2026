@@ -1,4 +1,4 @@
-.stats-section { background-color: var(--primary); border-top: 1px solid var(--dark-border); border-bottom: 1px solid var(--dark-border); padding: 90px 0; position: relative; overflow: hidden; }
+.stats-section { background: transparent; border-top: 1px solid var(--dark-border); border-bottom: 1px solid var(--dark-border); padding: 90px 0; position: relative; overflow: hidden; z-index: 2; }
 .stats-header { text-align: center; max-width: 650px; margin: 0 auto 50px; }
 .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
 @media (max-width: 1024px) {

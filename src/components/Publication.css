@@ -1,4 +1,4 @@
-.publication-section { background: radial-gradient(circle at 10% 50%, rgba(0, 98, 155, 0.15) 0%, transparent 50%), radial-gradient(circle at 90% 80%, rgba(0, 180, 216, 0.1) 0%, transparent 50%), var(--dark-bg); border-top: 1px solid var(--dark-border); border-bottom: 1px solid var(--dark-border); position: relative; overflow: hidden; }
+.publication-section { background: transparent; border-top: 1px solid var(--dark-border); border-bottom: 1px solid var(--dark-border); position: relative; overflow: hidden; z-index: 2; }
 .publication-grid { display: grid; grid-template-columns: 1.25fr 1fr; gap: 48px; align-items: center; }
 @media (max-width: 1024px) {
   .publication-grid { grid-template-columns: 1fr; gap: 40px; }

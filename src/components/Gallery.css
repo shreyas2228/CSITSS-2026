@@ -1,4 +1,4 @@
-.gallery-section { background-color: var(--primary); padding: 100px 0; position: relative; overflow: hidden; }
+.gallery-section { background: transparent; padding: 100px 0; position: relative; overflow: hidden; z-index: 2; }
 .gallery-filter-bar { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; margin: 40px 0 45px; }
 .gallery-filter-btn { background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); padding: 8px 18px; border-radius: var(--radius-full); font-size: 0.85rem; font-weight: 600; color: #94a3b8; cursor: pointer; transition: all 0.2s ease; }
 .gallery-filter-btn:hover { background: rgba(255, 255, 255, 0.1); color: #ffffff; }

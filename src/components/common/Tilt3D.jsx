@@ -31,6 +31,9 @@ export default function Tilt3D({
     const rotateY = xPct * maxTilt * 2;
     const rotateX = -yPct * maxTilt * 2;
 
+    cardRef.current.style.setProperty('--mouse-x', `${((xPct + 0.5) * 100).toFixed(1)}%`);
+    cardRef.current.style.setProperty('--mouse-y', `${((yPct + 0.5) * 100).toFixed(1)}%`);
+
     setStyle({
       transform: `perspective(${perspective}px) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg) scale3d(${scale}, ${scale}, ${scale})`,
       transition: 'transform 0.1s ease-out'
