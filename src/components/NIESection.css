@@ -212,3 +212,16 @@
   gap: 16px;
   flex-wrap: wrap;
 }
+
+@media (max-width: 600px) {
+  .nie-campus-card {
+    height: 250px;
+  }
+  .nie-img-overlay {
+    padding: 20px 16px;
+  }
+  .nie-overlay-title {
+    font-size: 1.15rem;
+  }
+}
+

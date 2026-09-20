@@ -42,3 +42,19 @@
   .mobile-hamburger-btn { display: flex; }
   .btn-nav-cta { display: none; }
 }
+
+@media (max-width: 480px) {
+  .navbar-header { padding: 12px 0; }
+  .navbar-container { gap: 10px; }
+  .brand-logo-circle { width: 34px; height: 34px; font-size: 0.68rem; }
+  .brand-inst-name { font-size: 0.74rem; }
+  .brand-conf-acronym { font-size: 0.62rem; }
+}
+
+@media (max-width: 360px) {
+  .navbar-container { gap: 6px; }
+  .brand-logo-circle { width: 30px; height: 30px; font-size: 0.62rem; }
+  .brand-separator { height: 18px; }
+  .brand-inst-name { font-size: 0.7rem; }
+  .brand-conf-acronym { font-size: 0.58rem; letter-spacing: 0.08em; }
+}

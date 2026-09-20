@@ -129,3 +129,21 @@
     height: 40px;
   }
 }
+
+@media (max-width: 420px) {
+  .floating-fab-container {
+    bottom: 16px;
+    right: 14px;
+  }
+
+  .fab-register-btn {
+    padding: 8px 13px;
+    font-size: 0.76rem;
+  }
+
+  .fab-top-btn {
+    width: 36px;
+    height: 36px;
+  }
+}
+

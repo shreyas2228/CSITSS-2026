@@ -231,3 +231,20 @@
   line-height: 1.6;
   transform: translateZ(12px);
 }
+
+@media (max-width: 480px) {
+  .about-narrative-card,
+  .about-ieee-box {
+    padding: 22px 18px;
+  }
+  .narrative-heading {
+    font-size: 1.3rem;
+  }
+  .ieee-box-title {
+    font-size: 1.1rem;
+  }
+  .why-card {
+    padding: 22px 18px;
+  }
+}
+

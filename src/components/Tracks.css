@@ -314,3 +314,36 @@
   display: flex;
   justify-content: flex-end;
 }
+
+@media (max-width: 640px) {
+  .track-modal {
+    padding: 24px 18px;
+    max-height: 88vh;
+    overflow-y: auto;
+  }
+  .modal-track-heading {
+    font-size: 1.25rem;
+  }
+  .modal-topics-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  .modal-topic-item {
+    padding: 10px 12px;
+    font-size: 0.82rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .track-card {
+    padding: 20px 16px;
+  }
+  .track-title {
+    font-size: 1.08rem;
+  }
+  .track-desc {
+    font-size: 0.84rem;
+  }
+}
+

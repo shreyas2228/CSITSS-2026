@@ -242,6 +242,22 @@
   .connectivity-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
+@media (max-width: 600px) {
+  .venue-card-main {
+    padding: 22px 18px;
+  }
+  .venue-card-title {
+    font-size: 1.3rem;
+  }
+  .map-frame-wrapper {
+    min-height: 280px;
+  }
+  .mysuru-highlights-card {
+    padding: 20px 16px;
+  }
+}
+
 @media (max-width: 540px) {
   .connectivity-grid { grid-template-columns: 1fr; }
 }
+

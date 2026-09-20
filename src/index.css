@@ -467,6 +467,9 @@ h1, h2, h3, h4, h5, h6 {
   .card, .card-dark, .glass-card-3d {
     padding: 24px;
   }
+  .section-title {
+    font-size: clamp(1.6rem, 5vw, 2.2rem);
+  }
 }
 
 @media (max-width: 480px) {
@@ -474,8 +477,19 @@ h1, h2, h3, h4, h5, h6 {
     padding-left: 16px;
     padding-right: 16px;
   }
-  .btn {
+  .hero-actions-row .btn,
+  .pub-buttons-row .btn,
+  .venue-action-buttons .btn,
+  .nie-cta-group .btn,
+  .modal-action-row .btn {
     width: 100%;
-    padding: 12px 20px;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 360px) {
+  .container {
+    padding-left: 12px;
+    padding-right: 12px;
   }
 }

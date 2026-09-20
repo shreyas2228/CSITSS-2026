@@ -243,3 +243,18 @@
 @media (max-width: 860px) {
   .contact-grid { grid-template-columns: 1fr; }
 }
+
+@media (max-width: 600px) {
+  .contact-card-dark,
+  .contact-form-card {
+    padding: 24px 18px;
+  }
+  .contact-card-title,
+  .form-card-title {
+    font-size: 1.25rem;
+  }
+  .contact-cmt-box {
+    padding: 14px 16px;
+  }
+}
+

@@ -258,3 +258,22 @@
   .timeline-notice-box { flex-direction: column; align-items: flex-start; }
   .notice-action-btn { margin-left: 0; }
 }
+
+@media (max-width: 480px) {
+  .timeline-card { padding-left: 44px; }
+  .timeline-track-line { left: 14px; }
+  .timeline-marker { left: 2px; width: 24px; height: 24px; font-size: 0.68rem; top: 12px; }
+  .timeline-card-inner { padding: 18px 16px; }
+  .timeline-card-title { font-size: 1.05rem; }
+  .timeline-date-tag { font-size: 0.78rem; padding: 4px 10px; }
+  .timeline-notice-box { padding: 18px 16px; }
+}
+
+@media (max-width: 360px) {
+  .timeline-card { padding-left: 36px; }
+  .timeline-track-line { left: 10px; }
+  .timeline-marker { left: 0; width: 20px; height: 20px; font-size: 0.6rem; }
+  .timeline-card-inner { padding: 14px 12px; }
+  .timeline-card-title { font-size: 0.98rem; }
+}
+

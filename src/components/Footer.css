@@ -28,3 +28,19 @@
 @media (max-width: 960px) {
   .footer-top-grid { grid-template-columns: 1fr; gap: 32px; }
 }
+
+@media (max-width: 540px) {
+  .footer-bottom-bar {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 14px;
+  }
+}
+
+@media (max-width: 380px) {
+  .footer-links-grid {
+    grid-template-columns: 1fr;
+  }
+}
+

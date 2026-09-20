@@ -24,3 +24,27 @@
 }
 .live-status-chip { display: inline-flex; align-items: center; gap: 8px; background-color: rgba(239, 68, 68, 0.15); border: 1px solid rgba(239, 68, 68, 0.35); color: #f87171; padding: 6px 14px; border-radius: var(--radius-full); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.05em; }
 .live-pulse-icon { animation: pulseDot 1s infinite; }
+
+@media (max-width: 560px) {
+  .countdown-digits-grid { gap: 8px; }
+  .digit-unit { min-width: 62px; padding: 8px 12px; }
+  .digit-number { font-size: 1.35rem; }
+  .digit-separator { font-size: 1.2rem; }
+}
+
+@media (max-width: 420px) {
+  .countdown-band { padding: 20px 0; }
+  .countdown-digits-grid { gap: 5px; }
+  .digit-unit { min-width: 52px; padding: 6px 8px; }
+  .digit-number { font-size: 1.18rem; }
+  .digit-label { font-size: 0.56rem; }
+  .digit-separator { font-size: 1rem; opacity: 0.6; }
+}
+
+@media (max-width: 360px) {
+  .countdown-digits-grid { gap: 4px; }
+  .digit-unit { min-width: 48px; padding: 6px 6px; }
+  .digit-number { font-size: 1.05rem; }
+  .digit-separator { display: none; }
+}
+
