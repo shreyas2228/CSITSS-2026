@@ -3,6 +3,9 @@
   will-change: transform;
   position: relative;
   border-radius: inherit;
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
 }
 
 .tilt-3d-inner {

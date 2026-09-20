@@ -137,7 +137,7 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="footer-bottom-bar">
-          <p>© 2026 {institution.name} (NIE), Mysuru & IEEE. All rights reserved.</p>
+          <p>© 2027 {institution.name} (NIE), Mysuru & IEEE. All rights reserved.</p>
 
           <div className="footer-meta-stats">
             <div className="view-counter-badge" title="Total Website Visits">

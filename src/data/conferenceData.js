@@ -44,7 +44,7 @@ export const conferenceData = {
     { "id": "qa-contact", "title": "Contact Desk", "desc": "Get in touch with the organizing secretariat", "link": "#contact", "icon": "Mail" }
   ],
   "aboutConference": {
-    "overview": "The International Conference on Next-Generation Computing and Sustainable Technology (ICNCST 2026) is organized by The National Institute of Engineering (NIE), Mysuru in technical co-sponsorship with IEEE Bangalore Section. The conference serves as a premier international forum for researchers, academicians, scientists, and industrial practitioners to share novel methodologies, cutting-edge empirical findings, and visionary applications in emerging technology domains.",
+    "overview": "The International Conference on Recent Trends in Electronics and Communication (ICRTEC 2027) is organized by The National Institute of Engineering (NIE), Mysuru in technical co-sponsorship with IEEE Bangalore Section. The conference serves as a premier international forum for researchers, academicians, scientists, and industrial practitioners to share novel methodologies, cutting-edge empirical findings, and visionary applications in emerging technology domains.",
     "scope": "The conference spans foundational computing, machine intelligence, cybersecurity, autonomous edge systems, green energy infrastructures, and responsible AI governance. All peer-reviewed submissions undergo a rigorous single-blind peer-review process evaluated on technical soundness, originality, clarity, and societal impact.",
     "whyAttend": [
       { "icon": "Lightbulb", "title": "Present Research", "desc": "Disseminate original research findings to a global academic audience and gain invaluable peer feedback." },
@@ -69,85 +69,141 @@ export const conferenceData = {
     {
       "id": "track-1",
       "number": "01",
-      "title": "Artificial Intelligence & Machine Learning",
-      "description": "Advancements in theoretical foundations, foundational models, and applied intelligent systems.",
+      "title": "Intelligent Communication, Electromagnetics and Signal Technologies",
+      "description": "Next-generation wireless communications, antenna design, electromagnetic propagation, RF circuits, and advanced signal processing techniques.",
       "topics": [
-        "Deep Learning Architectures & Transformers",
-        "Generative AI & Large Language Models",
-        "Explainable, Ethical & Trustworthy AI",
-        "Computer Vision & Multimodal Perception",
-        "Natural Language Processing & Speech",
-        "Reinforcement Learning & Autonomy"
+        "5G-Advanced, 6G Wireless Architecture & Terahertz Communications",
+        "RF, Microwave, Millimeter-Wave Circuits & Antennas",
+        "Reconfigurable Intelligent Surfaces (RIS) & Metamaterials",
+        "Statistical, Adaptive & Multidimensional Signal Processing",
+        "MIMO, Massive MIMO & Beamforming Technologies",
+        "Optical, Satellite & Non-Terrestrial Network Systems"
       ]
     },
     {
       "id": "track-2",
       "number": "02",
-      "title": "Data Science & Intelligent Analytics",
-      "description": "Big data management, statistical learning, and domain-specific predictive computing.",
+      "title": "Sustainable Electronics, VLSI and Embedded Intelligence",
+      "description": "Energy-efficient semiconductor design, low-power VLSI architectures, TinyML, and circular electronic hardware systems.",
       "topics": [
-        "Scalable Big Data Frameworks",
-        "Predictive Modeling & Statistical Inference",
-        "Healthcare & Biomedical Informatics",
-        "Financial Analytics & Algorithmic FinTech",
-        "Knowledge Graphs & Semantic Web",
-        "Spatial-Temporal & Geospatial Analytics"
+        "Ultra-Low-Power VLSI Design & Energy-Harvesting Circuits",
+        "Edge AI, TinyML & Hardware Accelerators",
+        "Neuromorphic Computing & Emerging Memory Architectures",
+        "FPGA, ASIC Design & System-on-Chip (SoC) Integration",
+        "Green Electronics, Biodegradable Substrates & Circular Hardware",
+        "Real-Time Embedded Systems & Hardware Security"
       ]
     },
     {
       "id": "track-3",
       "number": "03",
-      "title": "Cybersecurity, Privacy & Blockchain",
-      "description": "Defending distributed computing environments, cryptographic protocols, and decentralized ledgers.",
+      "title": "Responsible AI, Data Analytics and Sustainable Computing",
+      "description": "Ethical, explainable, and resource-efficient artificial intelligence, big data analytics, and green computing paradigms.",
       "topics": [
-        "Zero-Trust Architecture & Threat Intelligence",
-        "Post-Quantum Cryptography & Security Protocols",
-        "Blockchain, Smart Contracts & Distributed Ledgers",
-        "Privacy-Preserving Federated Learning",
-        "Cloud, Container & Virtualization Defense",
-        "IoT & Industrial Control System Security"
+        "Explainable, Fair & Trustworthy Artificial Intelligence (XAI)",
+        "Energy-Efficient Machine Learning & Green Data Centers",
+        "Generative AI, Foundation Models & Deep Learning",
+        "Big Data Analytics, Statistical Modeling & Data Mining",
+        "Privacy-Preserving Machine Learning & Federated Systems",
+        "Predictive Analytics & Intelligent Decision Support"
       ]
     },
     {
       "id": "track-4",
       "number": "04",
-      "title": "IoT, Embedded Systems & Robotics",
-      "description": "Sensor ecosystems, edge intelligence, cyber-physical hardware, and robotic manipulation.",
+      "title": "Smart Energy Systems and Sustainable Mobility",
+      "description": "Clean energy generation, smart grid intelligence, energy storage breakthroughs, and electric/hybrid vehicular ecosystems.",
       "topics": [
-        "Smart Sensing & Industrial IoT (IIoT)",
-        "Edge Intelligence & TinyML Systems",
-        "Autonomous Ground & Aerial Vehicles (UAVs)",
-        "Cyber-Physical Systems & Digital Twins",
-        "Low-Power VLSI & Embedded Firmware",
-        "Human-Robot Collaboration & Soft Robotics"
+        "Smart Grids, Microgrids & Decentralized Energy Management",
+        "Renewable Energy Integration (Solar, Wind, Hydro & Hydrogen)",
+        "Electric Vehicle (EV) Powertrains & Fast-Charging Infrastructures",
+        "Battery Management Systems (BMS) & Energy Storage Technologies",
+        "Power Electronics, Inverters & Energy Efficient Drives",
+        "Intelligent Transportation Systems (ITS) & Vehicle-to-Grid (V2G)"
       ]
     },
     {
       "id": "track-5",
       "number": "05",
-      "title": "Sustainable Computing & Clean Energy",
-      "description": "Eco-friendly technologies, smart grid management, and carbon-efficient computing.",
+      "title": "Autonomous Systems and Sustainable Industry",
+      "description": "Industrial robotics, Industry 4.0/5.0 automation, unmanned autonomous platforms, and cyber-physical manufacturing.",
       "topics": [
-        "Green Cloud & Energy-Aware Architectures",
-        "Smart Grid Control & Microgrid Automation",
-        "Electric Mobility & Battery Management",
-        "Integrated Systems for Circular Economy",
-        "Carbon Capture & Resource Management",
-        "Precision Agriculture with Precision Sensors"
+        "Unmanned Aerial, Ground & Underwater Autonomous Vehicles",
+        "Industrial Automation, Digital Twins & Industry 5.0",
+        "Robotic Vision, Manipulation & Human-Robot Collaboration",
+        "Cyber-Physical Production Systems & Intelligent Manufacturing",
+        "Predictive Maintenance & Fault Diagnostics",
+        "Swarm Intelligence & Multi-Agent Coordination"
       ]
     },
     {
       "id": "track-6",
       "number": "06",
-      "title": "Next-Generation Communications",
-      "description": "Terahertz networks, non-terrestrial satellite communication, and optical transmission.",
+      "title": "Intelligent and Resilient Built Environment",
+      "description": "Smart urban infrastructure, building automation, structural health monitoring, and disaster-resilient civil systems.",
       "topics": [
-        "5G-Advanced and 6G Cellular Standards",
-        "Software-Defined Networks (SDN) & NFV",
-        "Satellite, HAPS & Non-Terrestrial Networks",
-        "MIMO, RIS & Intelligent Surface Antennas",
-        "Quantum Communication & Key Distribution",
-        "Vehicular V2X & Critical Communications"
+        "Smart Buildings, Building Information Modeling (BIM) & Automation",
+        "Structural Health Monitoring & Smart Sensor Networks",
+        "Climate-Resilient Urban Infrastructure & Flood/Earthquake Defense",
+        "Sustainable Construction Materials & Low-Carbon Engineering",
+        "Urban Digital Twins & Spatial Analytics for Smart Cities",
+        "Smart Water, Waste & Environmental Management Systems"
+      ]
+    },
+    {
+      "id": "track-7",
+      "number": "07",
+      "title": "Computational Science, Advanced Materials and Emerging Technologies",
+      "description": "High-performance computational modeling, quantum technologies, 2D nanomaterials, and breakthrough multidisciplinary innovations.",
+      "topics": [
+        "High-Performance Computing (HPC) & Scientific Simulation",
+        "Quantum Computing, Quantum Algorithms & Quantum Information",
+        "2D Materials, Nanomaterials & Advanced Semiconductor Synthesis",
+        "Computational Fluid Dynamics (CFD) & Finite Element Analysis",
+        "Photonics, Optoelectronics & Quantum Sensing",
+        "Biomimetic Materials & Emerging Nanostructures"
+      ]
+    },
+    {
+      "id": "track-8",
+      "number": "08",
+      "title": "Smart Sensing, Instrumentation and Connected Systems",
+      "description": "Precision instrumentation, smart sensor topologies, IoT edge networks, and measurement science.",
+      "topics": [
+        "Advanced Sensor Design, MEMS & NEMS Devices",
+        "Precision Measurement, Metrology & Automated Instrumentation",
+        "Industrial IoT (IIoT) & Wireless Sensor Networks (WSN)",
+        "Acoustic, Optical & Chemical Sensing Systems",
+        "Edge Sensor Fusion & Multi-Modal Calibration",
+        "Wearable, Ambient & Environmental Sensor Nodes"
+      ]
+    },
+    {
+      "id": "track-9",
+      "number": "09",
+      "title": "Intelligent Healthcare and Bio electronic Systems",
+      "description": "Biomedical instrumentation, AI in digital health, bio-signal processing, point-of-care diagnostics, and medical implants.",
+      "topics": [
+        "Bio-Signal & Medical Image Processing (ECG, EEG, MRI, CT)",
+        "AI-Driven Diagnostics & Personalized Precision Medicine",
+        "Wearable Health Monitors & Point-of-Care Diagnostics",
+        "Bio-Compatible Electronic Implants & Prosthetics",
+        "Telemedicine, Remote Patient Monitoring & IoMT",
+        "Rehabilitation Engineering & Brain-Computer Interfaces (BCI)"
+      ]
+    },
+    {
+      "id": "track-10",
+      "number": "10",
+      "title": "Digital Technologies for Agriculture, Environment and Sustainable Society",
+      "description": "Smart agriculture, environmental monitoring, ecological conservation, and digital interventions for societal sustainability.",
+      "topics": [
+        "Precision Agriculture, Drone-Based Crop & Soil Monitoring",
+        "IoT & AI for Smart Irrigation & Yield Prediction",
+        "Climate Change Modeling & Air/Water Quality Sensing",
+        "Remote Sensing, GIS & Satellite Environmental Monitoring",
+        "Smart Forestry, Biodiversity & Wildlife Conservation Tech",
+        "Digital Public Infrastructure & Tech for Social Sustainability"
       ]
     }
   ],
@@ -165,12 +221,12 @@ export const conferenceData = {
     ]
   },
   "importantDates": [
-    { "id": "d1", "title": "Call for Papers Announcement", "date": "May 15, 2026", "status": "completed", "description": "Submission system opens on Microsoft CMT portal." },
-    { "id": "d2", "title": "Full Manuscript Submission Deadline", "date": "August 15, 2026", "status": "active", "description": "Full research papers up to 6 pages in standard IEEE format." },
-    { "id": "d3", "title": "Notification of Acceptance", "date": "September 25, 2026", "status": "upcoming", "description": "Peer-review feedback and acceptance decisions communicated." },
-    { "id": "d4", "title": "Early Bird Registration Deadline", "date": "October 10, 2026", "status": "upcoming", "description": "Concessional registration closes for authors and delegates." },
-    { "id": "d5", "title": "Camera-Ready Manuscript & Copyright", "date": "October 20, 2026", "status": "upcoming", "description": "Final PDF submission with signed IEEE copyright transfer form." },
-    { "id": "d6", "title": "Conference Inauguration & Technical Sessions", "date": "November 19–21, 2026", "status": "upcoming", "description": "Keynotes, oral track presentations, panel sessions, and awards banquet.", "isHighlight": true }
+    { "id": "d1", "title": "Call for Papers Announcement", "date": "October 15, 2026", "status": "completed", "description": "Submission system opens on Microsoft CMT portal." },
+    { "id": "d2", "title": "Full Manuscript Submission Deadline", "date": "December 15, 2026", "status": "active", "description": "Full research papers up to 6 pages in standard IEEE format." },
+    { "id": "d3", "title": "Notification of Acceptance", "date": "January 15, 2027", "status": "upcoming", "description": "Peer-review feedback and acceptance decisions communicated." },
+    { "id": "d4", "title": "Early Bird Registration Deadline", "date": "January 25, 2027", "status": "upcoming", "description": "Concessional registration closes for authors and delegates." },
+    { "id": "d5", "title": "Camera-Ready Manuscript & Copyright", "date": "February 05, 2027", "status": "upcoming", "description": "Final PDF submission with signed IEEE copyright transfer form." },
+    { "id": "d6", "title": "Conference Inauguration & Technical Sessions", "date": "February 18–20, 2027", "status": "upcoming", "description": "Keynotes, oral track presentations, panel sessions, and awards banquet.", "isHighlight": true }
   ],
   "awards": [
     { "id": "aw-1", "title": "Best Research Paper Award", "description": "Conferred to the author(s) demonstrating superior scientific originality, analytical rigor, and transformative technological impact.", "eligibility": "All regular technical papers peer-reviewed, accepted, and presented in person during oral conference tracks." },
@@ -178,8 +234,8 @@ export const conferenceData = {
     { "id": "aw-3", "title": "Best Ph.D. Dissertation Award", "description": "Recognizing high-impact doctoral research with proven citation significance, industry relevance, or social value.", "eligibility": "Ph.D. theses successfully defended within the preceding 18 months in fields aligned with conference tracks." }
   ],
   "registration": {
-    "earlyBirdDeadline": "October 10, 2026",
-    "regularDeadline": "October 25, 2026",
+    "earlyBirdDeadline": "January 25, 2027",
+    "regularDeadline": "February 10, 2027",
     "notes": [
       "All registration fees are inclusive of applicable 18% GST.",
       "At least one author must register at the Author rate for each accepted paper to ensure inclusion in conference proceedings.",
@@ -348,12 +404,12 @@ export const conferenceData = {
     }
   ],
   "faq": [
-    { "question": "Who can submit research manuscripts to ICNCST 2026?", "answer": "Academicians, university researchers, postgraduate and doctoral scholars, scientists, and industry technology professionals worldwide are invited to submit original, unpublished research papers." },
+    { "question": "Who can submit research manuscripts to ICRTEC 2027?", "answer": "Academicians, university researchers, postgraduate and doctoral scholars, scientists, and industry technology professionals worldwide are invited to submit original, unpublished research papers." },
     { "question": "What is the official paper formatting template and page limit?", "answer": "Manuscripts must strictly adhere to the standard IEEE two-column conference format (LaTeX or MS Word). The paper length should be between 5 to 6 pages including all diagrams, tables, algorithms, and references." },
     { "question": "What is the policy regarding plagiarism and peer review?", "answer": "All submissions are subjected to automated similarity checks using IEEE CrossCheck. Manuscripts exceeding allowed thresholds or violating originality ethics will be rejected immediately without review. All qualifying papers undergo single-blind peer review by at least two domain specialists." },
     { "question": "Will accepted and presented papers appear in IEEE Xplore?", "answer": "All accepted and presented papers will be submitted for possible inclusion in IEEE Xplore, subject to satisfying IEEE scope and quality screening guidelines." },
     { "question": "Is IEEE membership mandatory to submit or register?", "answer": "No, IEEE membership is not compulsory. Authors without IEEE membership are warmly welcome to submit and participate, though active IEEE members enjoy discounted registration fees." },
-    { "question": "Can international authors present their research virtually?", "answer": "Yes, ICNCST 2026 is organized as a hybrid conference. Provisions for remote video presentations and Q&A will be arranged for international delegates and authors with verified travel constraints." },
+    { "question": "Can international authors present their research virtually?", "answer": "Yes, ICRTEC 2027 is organized as a hybrid conference. Provisions for remote video presentations and Q&A will be arranged for international delegates and authors with verified travel constraints." },
     { "question": "How do authors receive registration confirmations and receipts?", "answer": "Upon completing online registration through the portal and verifying payment, authors receive an automated confirmation email along with an official GST-compliant payment receipt and invitation letter." },
     { "question": "How can I get in touch with the conference secretariat?", "answer": "You can email our organizing team directly at ieeeconference@nie.ac.in or submit an inquiry using the contact form at the bottom of this website. Our team responds within 24–48 hours." }
   ]

@@ -1,4 +1,4 @@
-.countdown-band { background: linear-gradient(135deg, #050d20 0%, #0a1838 100%); border-top: 1px solid rgba(0, 180, 216, 0.25); border-bottom: 1px solid rgba(0, 180, 216, 0.15); padding: 26px 0; color: #ffffff; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35); position: relative; z-index: 10; }
+.countdown-band { background: linear-gradient(135deg, rgba(5, 13, 32, 0.72) 0%, rgba(10, 24, 56, 0.72) 100%); border-top: 1px solid rgba(0, 180, 216, 0.25); border-bottom: 1px solid rgba(0, 180, 216, 0.15); padding: 26px 0; color: #ffffff; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35); position: relative; z-index: 10; }
 .countdown-container { display: flex; align-items: center; justify-content: space-between; gap: 30px; flex-wrap: wrap; }
 @media (max-width: 860px) {
   .countdown-container { flex-direction: column; text-align: center; gap: 20px; }

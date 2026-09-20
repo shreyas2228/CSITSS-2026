@@ -155,11 +155,9 @@ ul, ol {
   z-index: 1;
 }
 
-/* Unified Frosted Glassmorphism Section Rhythm (Seamless 3D WebGL visibility) */
+/* Unified Frosted Glassmorphism Section Rhythm (Seamless 3D WebGL visibility throughout page) */
 .section-light {
-  background: rgba(8, 18, 42, 0.68);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  background: rgba(8, 18, 42, 0.42);
   color: #ffffff;
   border-top: 1px solid rgba(0, 180, 216, 0.15);
   border-bottom: 1px solid rgba(0, 180, 216, 0.15);
@@ -167,9 +165,7 @@ ul, ol {
 }
 
 .section-subtle {
-  background: rgba(5, 12, 30, 0.75);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  background: rgba(5, 12, 30, 0.48);
   color: #ffffff;
   border-top: 1px solid rgba(0, 180, 216, 0.18);
   border-bottom: 1px solid rgba(0, 180, 216, 0.18);
@@ -177,9 +173,7 @@ ul, ol {
 }
 
 .section-dark {
-  background: rgba(3, 8, 22, 0.82);
-  backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(24px);
+  background: rgba(3, 8, 22, 0.52);
   color: #ffffff;
   border-top: 1px solid rgba(0, 180, 216, 0.22);
   border-bottom: 1px solid rgba(0, 180, 216, 0.22);

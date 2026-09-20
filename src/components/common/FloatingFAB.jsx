@@ -44,7 +44,7 @@ export default function FloatingFAB() {
         href="#registration"
         onClick={scrollToRegistration}
         className="fab-btn fab-register-btn"
-        title="Register for CSITSS-2026"
+        title="Register for ICRTEC 2027"
         aria-label="Register Now"
       >
         <span className="fab-pulse-ring"></span>

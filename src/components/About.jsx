@@ -70,7 +70,7 @@ export default function About() {
                 </div>
               </div>
               <p className="ieee-box-text">
-                ICNCST 2026 adheres strictly to the publication ethics, review rigor, and formatting standards mandated by the IEEE. Every accepted paper is subjected to multi-reviewer technical scrutiny.
+                {conference.acronym} adheres strictly to the publication ethics, review rigor, and formatting standards mandated by the IEEE. Every accepted paper is subjected to multi-reviewer technical scrutiny.
               </p>
               <div className="ieee-feature-tags">
                 <span className="f-tag">Single-Blind Review</span>
@@ -89,7 +89,7 @@ export default function About() {
 
         {/* Why Attend Grid with 3D Tilt Cards */}
         <div className="why-attend-block">
-          <h3 className="why-attend-heading">Why Attend ICNCST 2026?</h3>
+          <h3 className="why-attend-heading">Why Attend {conference.acronym}?</h3>
           <div className="why-attend-grid">
             {aboutConference.whyAttend.map((item, idx) => {
               const IconComp = iconMap[item.icon] || Lightbulb;

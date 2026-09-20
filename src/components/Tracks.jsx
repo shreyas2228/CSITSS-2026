@@ -1,12 +1,16 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  BrainCircuit, 
-  BarChart3, 
-  ShieldCheck, 
-  Cpu, 
-  Leaf, 
   RadioTower, 
+  Cpu, 
+  BrainCircuit, 
+  Zap, 
+  Bot, 
+  Building2, 
+  Atom, 
+  Activity, 
+  HeartPulse, 
+  Sprout, 
   ArrowRight, 
   X, 
   CheckCircle 
@@ -16,12 +20,16 @@ import Tilt3D from './common/Tilt3D';
 import './Tracks.css';
 
 const trackIcons = [
-  BrainCircuit,
-  BarChart3,
-  ShieldCheck,
-  Cpu,
-  Leaf,
-  RadioTower
+  RadioTower,    // Track 1: Communication & Electromagnetics
+  Cpu,           // Track 2: VLSI & Embedded Intelligence
+  BrainCircuit,  // Track 3: Responsible AI & Sustainable Computing
+  Zap,           // Track 4: Smart Energy & Sustainable Mobility
+  Bot,           // Track 5: Autonomous Systems & Sustainable Industry
+  Building2,     // Track 6: Resilient Built Environment
+  Atom,          // Track 7: Computational Science & Advanced Materials
+  Activity,      // Track 8: Smart Sensing & Connected Systems
+  HeartPulse,    // Track 9: Intelligent Healthcare & Bio electronics
+  Sprout         // Track 10: Digital Tech for Agriculture & Environment
 ];
 
 export default function Tracks() {
@@ -35,7 +43,7 @@ export default function Tracks() {
           <span className="section-badge">RESEARCH DOMAINS</span>
           <h2 className="section-title">Conference Technical Tracks</h2>
           <p className="section-desc">
-            Authors are invited to submit original, high-quality technical papers addressing state-of-the-art research across six core thematic areas.
+            Authors are invited to submit original, high-quality technical papers addressing state-of-the-art research across ten core thematic areas.
           </p>
         </div>
 
