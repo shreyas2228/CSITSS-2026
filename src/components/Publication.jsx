@@ -75,6 +75,16 @@ export default function Publication() {
                 <FileText size={15} />
                 <span>IEEE Manuscript Templates</span>
               </a>
+
+              <a
+                href={conference.previousEditionUrl || "https://ieeexplore.ieee.org/xpl/conhome/1849209/all-proceedings"}
+                target="_blank"
+                rel="noreferrer"
+                className="btn btn-outline-white btn-3d-depth"
+              >
+                <ExternalLink size={15} />
+                <span>ICRTEC 2023 Proceedings</span>
+              </a>
             </div>
           </div>
 

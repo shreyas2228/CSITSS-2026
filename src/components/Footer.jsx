@@ -107,6 +107,15 @@ export default function Footer() {
                 <ExternalLink size={13} />
               </a>
               <a
+                href={conference.previousEditionUrl || "https://ieeexplore.ieee.org/xpl/conhome/1849209/all-proceedings"}
+                target="_blank"
+                rel="noreferrer"
+                className="portal-link-item"
+              >
+                <span>ICRTEC 2023 IEEE Xplore Proceedings</span>
+                <ExternalLink size={13} />
+              </a>
+              <a
                 href="https://ieeebangalore.org"
                 target="_blank"
                 rel="noreferrer"

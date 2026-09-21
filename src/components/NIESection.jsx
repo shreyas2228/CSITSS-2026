@@ -21,8 +21,8 @@ export default function NIESection() {
           >
             <div className="nie-campus-card">
               <img
-                src="https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=1000&q=80"
-                alt="The National Institute of Engineering, Mysuru Campus"
+                src="/nie-modern-campus-complex.png"
+                alt="The National Institute of Engineering, Mysuru Campus - Heritage of Technical Excellence"
                 className="nie-campus-img"
               />
               <div className="nie-img-overlay">

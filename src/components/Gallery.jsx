@@ -6,11 +6,11 @@ import Tilt3D from './common/Tilt3D';
 import './Gallery.css';
 
 export default function Gallery() {
-  const { gallery, conference } = conferenceData;
+  const { gallery } = conferenceData;
   const [activeCategory, setActiveCategory] = useState('All');
   const [selectedImageIndex, setSelectedImageIndex] = useState(null);
 
-  const categories = ['All', 'Campus', 'Conference', 'Keynotes', 'Students', 'Awards'];
+  const categories = ['All', ...Array.from(new Set(gallery.map(item => item.category)))];
 
   const filteredImages = activeCategory === 'All'
     ? gallery
@@ -39,10 +39,10 @@ export default function Gallery() {
       <div className="container">
         {/* Section Header */}
         <div className="section-header section-header-dark">
-          <span className="section-badge-dark">CONFERENCE ARCHIVES & CAMPUS</span>
+          <span className="section-badge-dark">ICRTEC 2023 ARCHIVES & CAMPUS</span>
           <h2 className="section-title text-white">Visual Glimpses of Excellence</h2>
           <p className="section-desc text-white-muted">
-            Moments from past IEEE conference editions, research symposiums, and the heritage campus of NIE Mysuru.
+            Memories from the inaugural edition of IEEE ICRTEC 2023 and the landmark campus of NIE Mysuru.
           </p>
         </div>
 

@@ -129,6 +129,15 @@ export default function Navbar() {
           >
             Contact
           </a>
+          <a
+            href={conference.previousEditionUrl || "https://ieeexplore.ieee.org/xpl/conhome/1849209/all-proceedings"}
+            target="_blank"
+            rel="noreferrer"
+            className="nav-link nav-link-external"
+            title="ICRTEC 2023 Proceedings on IEEE Xplore"
+          >
+            ICRTEC 2023 <ArrowUpRight size={12} className="nav-external-icon" />
+          </a>
         </nav>
 
         {/* Right: Register Now Action */}
@@ -193,6 +202,14 @@ export default function Navbar() {
               </a>
               <a href="#contact" onClick={(e) => scrollToSection(e, 'contact')} className="mobile-nav-item">
                 Contact Secretariat
+              </a>
+              <a 
+                href={conference.previousEditionUrl || "https://ieeexplore.ieee.org/xpl/conhome/1849209/all-proceedings"} 
+                target="_blank" 
+                rel="noreferrer" 
+                className="mobile-nav-item mobile-external-item"
+              >
+                ICRTEC 2023 (IEEE Xplore) <ArrowUpRight size={14} />
               </a>
             </div>
 

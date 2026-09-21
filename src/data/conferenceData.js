@@ -20,21 +20,23 @@ export const conferenceData = {
     }
   },
   "conference": {
-    "name": "International Conference on Recent Trends in Electronics and Communication",
+    "name": "2nd International Conference on Recent Trends in Electronics and Communication",
     "acronym": "ICRTEC 2027",
-    "edition": "2027 Edition",
+    "edition": "2nd Edition",
+    "technicalCoSponsors": "IEEE ComSoC and IEEE CAS, Bangalore Section",
     "ieeeNotice": "Accepted and presented papers will be submitted for possible inclusion in IEEE Xplore, subject to meeting IEEE Xplore's scope and quality requirements.",
-    "dates": "February 18–20, 2027",
-    "countdownTarget": "2027-02-18T09:00:00+05:30",
-    "venue": "The National Institute of Engineering, Mysuru, Karnataka, India",
+    "dates": "Sep 16-17, 2027",
+    "countdownTarget": "2027-09-16T09:00:00+05:30",
+    "venue": "The National Institute of Engineering, Manandavadi Road, Mysuru – 570008, Karnataka, India",
     "mode": "Hybrid (In-person & Virtual Presentation Options)",
-    "theme": "Recent Trends and Innovations in Electronics, Circuits, Systems and Communication Networks",
+    "theme": "Artificial Intelligence and Sustainability in Electronics and Communication",
     "registrationUrl": "#registration",
     "paperSubmissionUrl": "#publication",
     "brochureUrl": "#publication",
-    "contactEmail": "ieeeconference@nie.ac.in",
+    "contactEmail": "icrtec2027@nie.ac.in",
     "contactPhone": "+91 821 2480475",
-    "cmtUrl": "https://cmt3.research.microsoft.com/"
+    "cmtUrl": "https://cmt3.research.microsoft.com/",
+    "previousEditionUrl": "https://ieeexplore.ieee.org/xpl/conhome/1849209/all-proceedings"
   },
   "quickActions": [
     { "id": "qa-submit", "title": "Submit Paper", "desc": "Call for papers open for original manuscripts", "link": "#publication", "icon": "FileUp" },
@@ -44,8 +46,9 @@ export const conferenceData = {
     { "id": "qa-contact", "title": "Contact Desk", "desc": "Get in touch with the organizing secretariat", "link": "#contact", "icon": "Mail" }
   ],
   "aboutConference": {
-    "overview": "The International Conference on Recent Trends in Electronics and Communication (ICRTEC 2027) is organized by The National Institute of Engineering (NIE), Mysuru in technical co-sponsorship with IEEE Bangalore Section. The conference serves as a premier international forum for researchers, academicians, scientists, and industrial practitioners to share novel methodologies, cutting-edge empirical findings, and visionary applications in emerging technology domains.",
-    "scope": "The conference spans foundational computing, machine intelligence, cybersecurity, autonomous edge systems, green energy infrastructures, and responsible AI governance. All peer-reviewed submissions undergo a rigorous single-blind peer-review process evaluated on technical soundness, originality, clarity, and societal impact.",
+    "overview": "The 2nd International Conference on Recent Trends in Electronics and Communication (ICRTEC 2027) is organized by The National Institute of Engineering (NIE), Mysuru in technical co-sponsorship with the IEEE ComSoC and IEEE CAS , Bangalore Section. Scheduled for September 16–17, 2027, the conference serves as a premier international forum for researchers, academicians, scientists, and industrial practitioners to share novel methodologies, cutting-edge empirical findings, and visionary applications under the theme \"Artificial Intelligence and Sustainability in Electronics and Communication.\"",
+    "scope": "The conference features keynote addresses delivered by IEEE Fellows and global research directors, and spans foundational computing, machine intelligence, cybersecurity, autonomous edge systems, green energy infrastructures, and responsible AI governance across the following main tracks: Intelligent Communication, Electromagnetics and Signal Technologies, Sustainable Electronics, VLSI and Embedded Intelligence, Responsible AI, Data Analytics and Sustainable Computing, Smart Energy Systems and Sustainable Mobility, Autonomous Systems and Sustainable Industry, Intelligent and Resilient Built Environment, Computational Science, Advanced Materials and Emerging Technologies, Smart Sensing, Instrumentation and Connected Systems, Intelligent Healthcare and Bioelectronic Systems, Digital Technologies for Agriculture, Environment and Sustainable Society.",
+    "reviewPolicy": "All submissions undergo a rigorous single-blind peer-review process—inclusive of IEEE CrossCheck screening—and are evaluated based on technical soundness, originality, clarity, and societal impact. All successfully presented papers will be submitted for possible inclusion in IEEE Xplore.",
     "whyAttend": [
       { "icon": "Lightbulb", "title": "Present Research", "desc": "Disseminate original research findings to a global academic audience and gain invaluable peer feedback." },
       { "icon": "Users2", "title": "Global Networking", "desc": "Interact with leading scientists, postdoctoral fellows, and tech innovators from across the globe." },
@@ -221,12 +224,13 @@ export const conferenceData = {
     ]
   },
   "importantDates": [
-    { "id": "d1", "title": "Call for Papers Announcement", "date": "October 15, 2026", "status": "completed", "description": "Submission system opens on Microsoft CMT portal." },
-    { "id": "d2", "title": "Full Manuscript Submission Deadline", "date": "December 15, 2026", "status": "active", "description": "Full research papers up to 6 pages in standard IEEE format." },
-    { "id": "d3", "title": "Notification of Acceptance", "date": "January 15, 2027", "status": "upcoming", "description": "Peer-review feedback and acceptance decisions communicated." },
-    { "id": "d4", "title": "Early Bird Registration Deadline", "date": "January 25, 2027", "status": "upcoming", "description": "Concessional registration closes for authors and delegates." },
-    { "id": "d5", "title": "Camera-Ready Manuscript & Copyright", "date": "February 05, 2027", "status": "upcoming", "description": "Final PDF submission with signed IEEE copyright transfer form." },
-    { "id": "d6", "title": "Conference Inauguration & Technical Sessions", "date": "February 18–20, 2027", "status": "upcoming", "description": "Keynotes, oral track presentations, panel sessions, and awards banquet.", "isHighlight": true }
+    { "id": "d1", "title": "Call for Papers", "date": "15 October 2026", "status": "completed", "description": "Submission system opens on Microsoft CMT portal." },
+    { "id": "d2", "title": "Paper Submission Deadline", "date": "15 May 2027", "status": "active", "description": "Full research papers up to 6 pages in standard IEEE format." },
+    { "id": "d3", "title": "Notification of Acceptance", "date": "30 June 2027", "status": "upcoming", "description": "Peer-review feedback and acceptance decisions communicated." },
+    { "id": "d4", "title": "Early-Bird Registration Deadline", "date": "15 July 2027", "status": "upcoming", "description": "Concessional registration closes for authors and delegates." },
+    { "id": "d5", "title": "Camera-Ready Submission", "date": "20 July 2027", "status": "upcoming", "description": "Final PDF submission with signed IEEE copyright transfer form." },
+    { "id": "d6", "title": "Author Registration Deadline", "date": "31 July 2027", "status": "upcoming", "description": "Mandatory registration closes for accepted paper authors." },
+    { "id": "d7", "title": "Conference Dates", "date": "Sep 16-17, 2027", "status": "upcoming", "description": "Keynotes, oral track presentations, panel sessions, and awards banquet.", "isHighlight": true }
   ],
   "awards": [
     { "id": "aw-1", "title": "Best Research Paper Award", "description": "Conferred to the author(s) demonstrating superior scientific originality, analytical rigor, and transformative technological impact.", "eligibility": "All regular technical papers peer-reviewed, accepted, and presented in person during oral conference tracks." },
@@ -234,8 +238,9 @@ export const conferenceData = {
     { "id": "aw-3", "title": "Best Ph.D. Dissertation Award", "description": "Recognizing high-impact doctoral research with proven citation significance, industry relevance, or social value.", "eligibility": "Ph.D. theses successfully defended within the preceding 18 months in fields aligned with conference tracks." }
   ],
   "registration": {
-    "earlyBirdDeadline": "January 25, 2027",
-    "regularDeadline": "February 10, 2027",
+    "earlyBirdDeadline": "15 July 2027",
+    "authorDeadline": "31 July 2027",
+    "regularDeadline": "31 July 2027",
     "notes": [
       "All registration fees are inclusive of applicable 18% GST.",
       "At least one author must register at the Author rate for each accepted paper to ensure inclusion in conference proceedings.",
@@ -373,19 +378,25 @@ export const conferenceData = {
     ]
   },
   "gallery": [
-    { "id": "g-1", "category": "Campus", "title": "NIE Iconic Campus Quadrangle", "image": "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=800&q=80" },
-    { "id": "g-2", "category": "Conference", "title": "Inaugural Ceremony & Lighting of the Lamp", "image": "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=800&q=80" },
-    { "id": "g-3", "category": "Keynotes", "title": "Plenary Keynote Session by Global Scholar", "image": "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&w=800&q=80" },
-    { "id": "g-4", "category": "Students", "title": "Interactive Student Research Poster Session", "image": "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80" },
-    { "id": "g-5", "category": "Awards", "title": "Best Research Paper Felicitation Banquet", "image": "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=800&q=80" },
-    { "id": "g-6", "category": "Conference", "title": "Technical Parallel Session Presentations", "image": "https://images.unsplash.com/photo-1517457373958-b7bdd4587205?auto=format&fit=crop&w=800&q=80" }
+    { "id": "g-1", "category": "ICRTEC 2023", "title": "Inaugural Lamp Lighting Ceremony – IEEE ICRTEC 2023", "image": "/gallery/icrtec-2023-lamp-lighting-ceremony.jpg" },
+    { "id": "g-2", "category": "ICRTEC 2023", "title": "Dignitaries & Session Chairs on the Dais – IEEE ICRTEC 2023", "image": "/gallery/icrtec-2023-dais-seated-dignitaries.jpg" },
+    { "id": "g-3", "category": "ICRTEC 2023", "title": "Keynote Address by Distinguished Guest of Honor – IEEE ICRTEC 2023", "image": "/gallery/icrtec-2023-keynote-address-podium.jpg" },
+    { "id": "g-4", "category": "ICRTEC 2023", "title": "Felicitation Ceremony of Chief Guest with Mysore Peta & Memento – ICRTEC 2023", "image": "/gallery/icrtec-2023-felicitation-ceremony.jpg" },
+    { "id": "g-5", "category": "ICRTEC 2023", "title": "Inaugural Delegation & Organizing Leadership Group Photo on Dais", "image": "/gallery/icrtec-2023-dignitaries-stage-group.jpg" },
+    { "id": "g-6", "category": "ICRTEC 2023", "title": "Delegate Registration & Kit Distribution Desk – ICRTEC 2023", "image": "/gallery/icrtec-2023-registration-desk.jpg" },
+    { "id": "g-7", "category": "ICRTEC 2023", "title": "Audience & Research Delegates at Inaugural Session – ICRTEC 2023", "image": "/gallery/icrtec-2023-audience-delegates.jpg" },
+    { "id": "g-8", "category": "ICRTEC 2023", "title": "Organizing Committee & Technical Session Chairs Deliberation Meeting", "image": "/gallery/icrtec-2023-committee-meeting.jpg" },
+    { "id": "g-9", "category": "ICRTEC 2023", "title": "Keynote Program & Conference Schedule – IEEE ICRTEC 2023", "image": "/gallery/icrtec-2023-poster.png" },
+    { "id": "g-10", "category": "Press & Media", "title": "State Newspaper Report – 'Students Can Build Their Own Satellite' (ISRO Dy. Director at ICRTEC 2023)", "image": "/gallery/icrtec-2023-press-clipping.png" },
+    { "id": "g-11", "category": "Campus", "title": "Heritage of Technical Excellence – The National Institute of Engineering, Mysuru", "image": "/gallery/nie-modern-campus-complex.png" }
   ],
   "sponsors": [
     {
-      "category": "Technical Co-Sponsor",
+      "category": "Technical Co-Sponsors",
       "partners": [
-        { "name": "IEEE Bangalore Section", "type": "Technical Co-Sponsor", "link": "https://ieeebangalore.org" },
-        { "name": "IEEE Computer Society Bangalore Chapter", "type": "Technical Partner", "link": "https://cs.ieeebangalore.org" }
+        { "name": "IEEE ComSoC Bangalore Chapter", "type": "Technical Co-Sponsor", "link": "https://ieeebangalore.org" },
+        { "name": "IEEE CAS Bangalore Chapter", "type": "Technical Co-Sponsor", "link": "https://ieeebangalore.org" },
+        { "name": "IEEE Bangalore Section", "type": "Technical Co-Sponsor", "link": "https://ieeebangalore.org" }
       ]
     },
     {
@@ -411,6 +422,6 @@ export const conferenceData = {
     { "question": "Is IEEE membership mandatory to submit or register?", "answer": "No, IEEE membership is not compulsory. Authors without IEEE membership are warmly welcome to submit and participate, though active IEEE members enjoy discounted registration fees." },
     { "question": "Can international authors present their research virtually?", "answer": "Yes, ICRTEC 2027 is organized as a hybrid conference. Provisions for remote video presentations and Q&A will be arranged for international delegates and authors with verified travel constraints." },
     { "question": "How do authors receive registration confirmations and receipts?", "answer": "Upon completing online registration through the portal and verifying payment, authors receive an automated confirmation email along with an official GST-compliant payment receipt and invitation letter." },
-    { "question": "How can I get in touch with the conference secretariat?", "answer": "You can email our organizing team directly at ieeeconference@nie.ac.in or submit an inquiry using the contact form at the bottom of this website. Our team responds within 24–48 hours." }
+    { "question": "How can I get in touch with the conference secretariat?", "answer": "You can email our organizing team directly at icrtec2027@nie.ac.in or submit an inquiry using the contact form at the bottom of this website. Our team responds within 24–48 hours." }
   ]
 };

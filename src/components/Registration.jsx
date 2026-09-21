@@ -25,10 +25,10 @@ export default function Registration() {
           <div className="deadline-pills">
             <div className="deadline-pill early-pill">
               <span className="pill-dot"></span>
-              <span>Early Bird Deadline: <strong>{registration.earlyBirdDeadline}</strong></span>
+              <span>Early-Bird Deadline: <strong>{registration.earlyBirdDeadline}</strong></span>
             </div>
             <div className="deadline-pill regular-pill">
-              <span>Regular Deadline: <strong>{registration.regularDeadline}</strong></span>
+              <span>Author Registration: <strong>{registration.authorDeadline || registration.regularDeadline}</strong></span>
             </div>
           </div>
 

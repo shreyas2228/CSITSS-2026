@@ -17,7 +17,9 @@ import {
   Building2, 
   Activity, 
   HeartPulse, 
-  Sprout 
+  Sprout,
+  ExternalLink,
+  Sparkles
 } from 'lucide-react';
 import { conferenceData } from '../data/conferenceData';
 import Hero3DCanvas from './common/Hero3DCanvas';
@@ -82,7 +84,7 @@ export default function Hero() {
             transition={{ duration: 0.5 }}
             className="hero-badge-row"
           >
-            <span className="hero-ieee-tag">IEEE TECHNICAL CO-SPONSORED</span>
+            <span className="hero-ieee-tag">IEEE ComSoC & IEEE CAS TECHNICAL CO-SPONSORED</span>
             <span className="hero-inst-pill">{institution.name}, Mysuru</span>
           </motion.div>
 
@@ -93,15 +95,38 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="hero-titles-block"
           >
-            <p className="hero-super-title">INTERNATIONAL CONFERENCE ON</p>
+            <p className="hero-super-title">THE 2ND INTERNATIONAL CONFERENCE ON</p>
             <h1 className="hero-heading hero-main-heading">
               Recent Trends in Electronics & <br />
               <span className="text-electric-cyan text-glow-3d">Communication</span>
             </h1>
             <div className="hero-acronym-badge">
               <span className="acronym-title">{conference.acronym}</span>
-              <span className="acronym-divider">|</span>
-              <span className="acronym-theme">{conference.theme}</span>
+              <span className="acronym-divider">•</span>
+              <span className="acronym-edition">{conference.edition}</span>
+            </div>
+
+            {/* Conference Theme Spotlight */}
+            <div className="hero-theme-spotlight">
+              <div className="hero-theme-tag">
+                <Sparkles size={13} className="inline-icon" />
+                <span>THEME</span>
+              </div>
+              <span className="hero-theme-text">{conference.theme}</span>
+            </div>
+
+            {/* Previous Edition Proceedings Link */}
+            <div className="hero-prev-edition-wrapper">
+              <a
+                href={conference.previousEditionUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="hero-prev-edition-link"
+              >
+                <span className="prev-edition-pill">PREVIOUS PROCEEDINGS</span>
+                <span className="prev-edition-label">Explore ICRTEC 2023 on IEEE Xplore</span>
+                <ExternalLink size={13} className="prev-edition-arrow" />
+              </a>
             </div>
           </motion.div>
 
@@ -131,7 +156,7 @@ export default function Hero() {
                 </div>
                 <div className="meta-card-text">
                   <span className="meta-card-label">HOST INSTITUTION</span>
-                  <span className="meta-card-val">NIE Campus, Mysuru, India</span>
+                  <span className="meta-card-val">{institution.name}, {institution.address}</span>
                 </div>
               </div>
             </Tilt3D>

@@ -23,7 +23,7 @@ export default function About() {
           <span className="section-badge">ABOUT THE CONFERENCE</span>
           <h2 className="section-title">Advancing Global Research & Sustainable Innovation</h2>
           <p className="section-desc">
-            Hosted by The National Institute of Engineering, Mysuru in technical co-sponsorship with IEEE.
+            Organized by The National Institute of Engineering (NIE), Mysuru in technical co-sponsorship with IEEE ComSoC and IEEE CAS, Bangalore Section.
           </p>
         </div>
 
@@ -40,6 +40,11 @@ export default function About() {
             <p className="narrative-paragraph">
               {aboutConference.scope}
             </p>
+            {aboutConference.reviewPolicy && (
+              <p className="narrative-paragraph">
+                {aboutConference.reviewPolicy}
+              </p>
+            )}
 
             <div className="about-highlights-list">
               <div className="highlight-item">
